@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HR_DHLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="Depa_DepartmentID" />
+    </Key>
+    <Property Name="Depa_DepartmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Depa_Deleted" Type="nvarchar" MaxLength="1" />
+    <Property Name="Depa_CreatedBy" Type="int" />
+    <Property Name="Depa_CreatedDate" Type="datetime" />
+    <Property Name="Depa_UpdatedBy" Type="int" />
+    <Property Name="Depa_UpdatedDate" Type="datetime" />
+    <Property Name="Depa_WorkflowID" Type="int" />
+    <Property Name="Depa_WorkflowItemID" Type="int" />
+    <Property Name="Depa_ZoneID" Type="int" />
+    <Property Name="Depa_Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="tblEmployee">
+    <Key>
+      <PropertyRef Name="empl_EmployeeID" />
+    </Key>
+    <Property Name="empl_EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="empl_Deleted" Type="nvarchar" MaxLength="1" />
+    <Property Name="empl_CreatedBy" Type="int" />
+    <Property Name="empl_CreatedDate" Type="datetime" />
+    <Property Name="empl_UpdatedBy" Type="int" />
+    <Property Name="empl_UpdatedDate" Type="datetime" />
+    <Property Name="empl_WorkflowID" Type="int" />
+    <Property Name="empl_WorkflowItemID" Type="int" />
+    <Property Name="empl_ZoneID" Type="int" />
+    <Property Name="empl_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="empl_PositionID" Type="int" />
+    <Property Name="empl_HiringDate" Type="datetime" />
+    <Property Name="empl_ConfirmationDate" Type="datetime" />
+    <Property Name="empl_ResignDate" Type="datetime" />
+    <Property Name="empl_DepartmentID" Type="int" />
+    <Property Name="empl_RootEmployeeID" Type="int" />
+    <Property Name="empl_WorkPermitNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_PayrollAccountNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_DOB" Type="nvarchar" MaxLength="20" />
+    <Property Name="empl_NationalityID" Type="int" />
+    <Property Name="empl_VisaNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="empl_Religion" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Phone2" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Spouse" Type="nvarchar" MaxLength="255" />
+    <Property Name="empl_Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_POB" Type="nvarchar" MaxLength="255" />
+    <Property Name="empl_IDCard" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Passport" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_NSSFNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Level" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_ProbationEnd" Type="datetime" />
+    <Property Name="empl_Salary" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="empl_JD" Type="nvarchar" MaxLength="500" />
+    <Property Name="empl_Children" Type="int" />
+    <Property Name="empl_ContractEndDate" Type="datetime" />
+    <Property Name="empl_ContractType" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Token" Type="nvarchar" MaxLength="255" />
+    <Property Name="empl_Password" Type="nvarchar" MaxLength="255" />
+    <Property Name="empl_LeaveBallance" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="empl_LeaveUsed" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="empl_Leave" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="empl_LeaveSchemeID" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tblLeave">
+    <Key>
+      <PropertyRef Name="leav_LeavID" />
+    </Key>
+    <Property Name="leav_LeavID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="leav_Deleted" Type="nvarchar" MaxLength="1" />
+    <Property Name="leav_CreatedBy" Type="int" />
+    <Property Name="leav_CreatedDate" Type="datetime" />
+    <Property Name="leav_UpdatedBy" Type="int" />
+    <Property Name="leav_UpdatedDate" Type="datetime" />
+    <Property Name="leav_WorkflowID" Type="int" />
+    <Property Name="leav_WorkflowItemID" Type="int" />
+    <Property Name="leav_ZoneID" Type="int" />
+    <Property Name="leav_Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="leav_Date" Type="datetime" />
+    <Property Name="leav_Type" Type="nvarchar" MaxLength="200" />
+    <Property Name="leav_Reason" Type="nvarchar" MaxLength="2000" />
+    <Property Name="leav_Remark" Type="nvarchar" MaxLength="2000" />
+    <Property Name="leav_LeavSchemeID" Type="nvarchar" MaxLength="200" />
+    <Property Name="leav_LeaveSchemeItemID" Type="nvarchar" MaxLength="200" />
+    <Property Name="leav_Status" Type="nvarchar" MaxLength="200" />
+    <Property Name="leav_EmployeeID" Type="nvarchar" MaxLength="200" />
+    <Property Name="leav_ToDate" Type="datetime" />
+    <Property Name="leav_HalfDay" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tblPayroll">
+    <Key>
+      <PropertyRef Name="payr_PayrollID" />
+    </Key>
+    <Property Name="payr_PayrollID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="payr_Deleted" Type="nvarchar" MaxLength="1" />
+    <Property Name="payr_CreatedBy" Type="int" />
+    <Property Name="payr_CreatedDate" Type="datetime" />
+    <Property Name="payr_UpdatedBy" Type="int" />
+    <Property Name="payr_UpdatedDate" Type="datetime" />
+    <Property Name="payr_WorkflowID" Type="int" />
+    <Property Name="payr_WorkflowItemID" Type="int" />
+    <Property Name="payr_ZoneID" Type="int" />
+    <Property Name="payr_Date" Type="datetime" />
+    <Property Name="payr_Note" Type="nvarchar" MaxLength="255" />
+    <Property Name="payr_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="payr_NWD" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="payr_FrDate" Type="datetime" />
+    <Property Name="payr_ToDate" Type="datetime" />
+    <Property Name="payr_ExRate" Type="numeric" Precision="18" Scale="6" />
+  </EntityType>
+  <EntityType Name="tblPayrollBenefit">
+    <Key>
+      <PropertyRef Name="prbf_PayrollBenefitID" />
+    </Key>
+    <Property Name="prbf_PayrollBenefitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="prbf_Deleted" Type="nvarchar" MaxLength="1" />
+    <Property Name="prbf_CreatedBy" Type="int" />
+    <Property Name="prbf_CreatedDate" Type="datetime" />
+    <Property Name="prbf_UpdatedBy" Type="int" />
+    <Property Name="prbf_UpdatedDate" Type="datetime" />
+    <Property Name="prbf_WorkflowID" Type="int" />
+    <Property Name="prbf_WorkflowItemID" Type="int" />
+    <Property Name="prbf_ZoneID" Type="int" />
+    <Property Name="prbf_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="prbf_Amount" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="prbf_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="prbf_EmployeeID" Type="int" />
+    <Property Name="prbf_Date" Type="datetime" />
+    <Property Name="prbf_PayrollID" Type="int" />
+    <Property Name="prbf_PayrollPropID" Type="int" />
+    <Property Name="prbf_DepartmentID" Type="int" />
+    <Property Name="prbf_RecurrentID" Type="int" />
+    <Property Name="prbf_Status" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityContainer Name="HR_DHLModelStoreContainer">
+    <EntitySet Name="tblDepartment" EntityType="Self.tblDepartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEmployee" EntityType="Self.tblEmployee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLeave" EntityType="Self.tblLeave" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPayroll" EntityType="Self.tblPayroll" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPayrollBenefit" EntityType="Self.tblPayrollBenefit" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HR_DHLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="Depa_DepartmentID" />
+    </Key>
+    <Property Name="Depa_DepartmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Depa_Deleted" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="Depa_CreatedBy" Type="Int32" />
+    <Property Name="Depa_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="Depa_UpdatedBy" Type="Int32" />
+    <Property Name="Depa_UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="Depa_WorkflowID" Type="Int32" />
+    <Property Name="Depa_WorkflowItemID" Type="Int32" />
+    <Property Name="Depa_ZoneID" Type="Int32" />
+    <Property Name="Depa_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblEmployee">
+    <Key>
+      <PropertyRef Name="empl_EmployeeID" />
+    </Key>
+    <Property Name="empl_EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="empl_Deleted" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="empl_CreatedBy" Type="Int32" />
+    <Property Name="empl_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="empl_UpdatedBy" Type="Int32" />
+    <Property Name="empl_UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="empl_WorkflowID" Type="Int32" />
+    <Property Name="empl_WorkflowItemID" Type="Int32" />
+    <Property Name="empl_ZoneID" Type="Int32" />
+    <Property Name="empl_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="empl_PositionID" Type="Int32" />
+    <Property Name="empl_HiringDate" Type="DateTime" Precision="3" />
+    <Property Name="empl_ConfirmationDate" Type="DateTime" Precision="3" />
+    <Property Name="empl_ResignDate" Type="DateTime" Precision="3" />
+    <Property Name="empl_DepartmentID" Type="Int32" />
+    <Property Name="empl_RootEmployeeID" Type="Int32" />
+    <Property Name="empl_WorkPermitNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_PayrollAccountNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_DOB" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="empl_NationalityID" Type="Int32" />
+    <Property Name="empl_VisaNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Religion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Phone2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Spouse" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_POB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="empl_IDCard" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Passport" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_NSSFNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Level" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_ProbationEnd" Type="DateTime" Precision="3" />
+    <Property Name="empl_Salary" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="empl_JD" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Children" Type="Int32" />
+    <Property Name="empl_ContractEndDate" Type="DateTime" Precision="3" />
+    <Property Name="empl_ContractType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Token" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="empl_LeaveBallance" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="empl_LeaveUsed" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="empl_Leave" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="empl_LeaveSchemeID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblLeave">
+    <Key>
+      <PropertyRef Name="leav_LeavID" />
+    </Key>
+    <Property Name="leav_LeavID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="leav_Deleted" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="leav_CreatedBy" Type="Int32" />
+    <Property Name="leav_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="leav_UpdatedBy" Type="Int32" />
+    <Property Name="leav_UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="leav_WorkflowID" Type="Int32" />
+    <Property Name="leav_WorkflowItemID" Type="Int32" />
+    <Property Name="leav_ZoneID" Type="Int32" />
+    <Property Name="leav_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="leav_Date" Type="DateTime" Precision="3" />
+    <Property Name="leav_Type" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="leav_Reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="leav_Remark" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="leav_LeavSchemeID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="leav_LeaveSchemeItemID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="leav_Status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="leav_EmployeeID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="leav_ToDate" Type="DateTime" Precision="3" />
+    <Property Name="leav_HalfDay" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblPayroll">
+    <Key>
+      <PropertyRef Name="payr_PayrollID" />
+    </Key>
+    <Property Name="payr_PayrollID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="payr_Deleted" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="payr_CreatedBy" Type="Int32" />
+    <Property Name="payr_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="payr_UpdatedBy" Type="Int32" />
+    <Property Name="payr_UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="payr_WorkflowID" Type="Int32" />
+    <Property Name="payr_WorkflowItemID" Type="Int32" />
+    <Property Name="payr_ZoneID" Type="Int32" />
+    <Property Name="payr_Date" Type="DateTime" Precision="3" />
+    <Property Name="payr_Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="payr_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="payr_NWD" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="payr_FrDate" Type="DateTime" Precision="3" />
+    <Property Name="payr_ToDate" Type="DateTime" Precision="3" />
+    <Property Name="payr_ExRate" Type="Decimal" Precision="18" Scale="6" />
+  </EntityType>
+  <EntityType Name="tblPayrollBenefit">
+    <Key>
+      <PropertyRef Name="prbf_PayrollBenefitID" />
+    </Key>
+    <Property Name="prbf_PayrollBenefitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="prbf_Deleted" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="prbf_CreatedBy" Type="Int32" />
+    <Property Name="prbf_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="prbf_UpdatedBy" Type="Int32" />
+    <Property Name="prbf_UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="prbf_WorkflowID" Type="Int32" />
+    <Property Name="prbf_WorkflowItemID" Type="Int32" />
+    <Property Name="prbf_ZoneID" Type="Int32" />
+    <Property Name="prbf_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="prbf_Amount" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="prbf_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="prbf_EmployeeID" Type="Int32" />
+    <Property Name="prbf_Date" Type="DateTime" Precision="3" />
+    <Property Name="prbf_PayrollID" Type="Int32" />
+    <Property Name="prbf_PayrollPropID" Type="Int32" />
+    <Property Name="prbf_DepartmentID" Type="Int32" />
+    <Property Name="prbf_RecurrentID" Type="Int32" />
+    <Property Name="prbf_Status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="HR_DHLEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblDepartments" EntityType="Self.tblDepartment" />
+    <EntitySet Name="tblEmployees" EntityType="Self.tblEmployee" />
+    <EntitySet Name="tblLeaves" EntityType="Self.tblLeave" />
+    <EntitySet Name="tblPayrolls" EntityType="Self.tblPayroll" />
+    <EntitySet Name="tblPayrollBenefits" EntityType="Self.tblPayrollBenefit" />
+  </EntityContainer>
+</Schema>
