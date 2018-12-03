@@ -1,5 +1,5 @@
 ﻿using HRApi.Models.DTO;
-using HRApi.Models.DTO.Employee;
+using HRApi.Models.DTO.Payroll;
 using HRApi.Utils.Handler;
 using HRApi.Utils.Helper;
 using System;
@@ -14,21 +14,21 @@ using System.Web.Http.Description;
 
 namespace HRApi.Controllers
 {
-    public class EmployeeController : ApiController
+    public class PayrollController : ApiController
     {
-        private const string route = ConstantHelper.API_VERSION + "employees";
+        private const string route = ConstantHelper.API_VERSION + "payrolls";
         private const string routeWithConstraint = route + "/{id:int:min(1)}";
-        private EmployeeHandler handler = null;
+        private PayrollHandler handler = null;
 
-        public EmployeeController()
+        public PayrollController()
         {
-            handler = new EmployeeHandler();
+            handler = new PayrollHandler();
         }
 
         //=> Select Customer By ID
         [HttpGet]
         [Route(routeWithConstraint)]
-        [ResponseType(typeof(EmployeeViewDTO))]
+        [ResponseType(typeof(PayrollViewDTO))]
         public async Task<IHttpActionResult> SelectByID(int id)
         {
             try
@@ -44,7 +44,7 @@ namespace HRApi.Controllers
         //=> Employee List
         [HttpGet]
         [Route(route)]
-        [ResponseType(typeof(GetListDTO<EmployeeViewDTO>))]
+        [ResponseType(typeof(GetListDTO<PayrollViewDTO>))]
         public async Task<IHttpActionResult> Get([FromUri] int currentPage)
         {
             return Ok(await handler.GetList(currentPage));

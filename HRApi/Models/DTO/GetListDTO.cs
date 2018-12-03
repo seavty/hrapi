@@ -8,6 +8,6 @@ namespace HRApi.Models.DTO
     public class GetListDTO<T>
     {
         public MetaDataDTO metaData;
-        public List<T> items;
+        public List<T> results;
     }
 }

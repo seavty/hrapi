@@ -13,5 +13,6 @@ namespace HRApi.Models.DTO.Employee
         public string empl_PayrollAccountNo { get; set; }
         public string empl_DOB { get; set; }
         public string empl_Address { get; set; }
+
     }
 }

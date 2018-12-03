@@ -60,8 +60,6 @@ namespace HRApi.Utils.Handler
         //=>Listing
         private async Task<GetListDTO<EmployeeViewDTO>> Listing(int currentPage, IQueryable<tblEmployee> query, string search = null)
         {
-
-            //int totalRecord = await query.CountAsync();
             var records = await query.Page(currentPage).ToListAsync();
 
             var myList = new List<EmployeeViewDTO>();
@@ -71,24 +69,8 @@ namespace HRApi.Utils.Handler
             }
             var getList = new GetListDTO<EmployeeViewDTO>();
             getList.metaData = await PaginationHelper.GetMetaData(currentPage, query, "name", "asc", search);
-            getList.items = myList;
-            return getList;
-
-
-            /*
-
-            int startRow = Helper.Helper.GetStartRow(currentPage);
-            var myList = new List<CustomerViewDTO>();
-            var myRecords = await records.Skip(startRow).Take(Helper.Helper.pageSize).ToListAsync();
-            foreach (var record in myRecords)
-            {
-                myList.Add(await SelectByID(record.id));
-            }
-            var getList = new GetListDTO<CustomerViewDTO>();
-            getList.metaData = await Helper.Helper.GetMetaData(currentPage, records, "name", "asc", search);
             getList.results = myList;
             return getList;
-            */
         }
     }
 }
