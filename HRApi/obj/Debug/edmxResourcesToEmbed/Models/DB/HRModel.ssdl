@@ -65,6 +65,8 @@
     <Property Name="empl_LeaveUsed" Type="numeric" Precision="18" Scale="6" />
     <Property Name="empl_Leave" Type="numeric" Precision="18" Scale="6" />
     <Property Name="empl_LeaveSchemeID" Type="nvarchar" MaxLength="200" />
+    <Property Name="empl_PayrollBenefitID" Type="nvarchar" MaxLength="200" />
+    <Property Name="empl_AdjustmentSchemeID" Type="nvarchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="tblLeave">
     <Key>
@@ -90,6 +92,41 @@
     <Property Name="leav_EmployeeID" Type="nvarchar" MaxLength="200" />
     <Property Name="leav_ToDate" Type="datetime" />
     <Property Name="leav_HalfDay" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tblLeaveScheme">
+    <Key>
+      <PropertyRef Name="lvsc_LeaveSchemeID" />
+    </Key>
+    <Property Name="lvsc_LeaveSchemeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="lvsc_Deleted" Type="nvarchar" MaxLength="1" />
+    <Property Name="lvsc_CreatedBy" Type="int" />
+    <Property Name="lvsc_CreatedDate" Type="datetime" />
+    <Property Name="lvsc_UpdatedBy" Type="int" />
+    <Property Name="lvsc_UpdatedDate" Type="datetime" />
+    <Property Name="lvsc_WorkflowID" Type="int" />
+    <Property Name="lvsc_WorkflowItemID" Type="int" />
+    <Property Name="lvsc_ZoneID" Type="int" />
+    <Property Name="lvsc_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="lvsc_Note" Type="nvarchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="tblLeaveSchemeItem">
+    <Key>
+      <PropertyRef Name="lvsi_LeaveSchemeItemID" />
+    </Key>
+    <Property Name="lvsi_LeaveSchemeItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="lvsi_Deleted" Type="nvarchar" MaxLength="1" />
+    <Property Name="lvsi_CreatedBy" Type="int" />
+    <Property Name="lvsi_CreatedDate" Type="datetime" />
+    <Property Name="lvsi_UpdatedBy" Type="int" />
+    <Property Name="lvsi_UpdatedDate" Type="datetime" />
+    <Property Name="lvsi_WorkflowID" Type="int" />
+    <Property Name="lvsi_WorkflowItemID" Type="int" />
+    <Property Name="lvsi_ZoneID" Type="int" />
+    <Property Name="lvsi_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="lvsi_PositionID" Type="int" />
+    <Property Name="lvsi_EmployeeID" Type="int" />
+    <Property Name="lvsi_Order" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="lvsi_LeaveSchemeID" Type="int" />
   </EntityType>
   <EntityType Name="tblPayroll">
     <Key>
@@ -135,11 +172,15 @@
     <Property Name="prbf_DepartmentID" Type="int" />
     <Property Name="prbf_RecurrentID" Type="int" />
     <Property Name="prbf_Status" Type="nvarchar" MaxLength="200" />
+    <Property Name="prbf_AdjustmentID" Type="nvarchar" MaxLength="200" />
+    <Property Name="prbf_AdjustmentItemID" Type="nvarchar" MaxLength="200" />
   </EntityType>
   <EntityContainer Name="HR_DHLModelStoreContainer">
     <EntitySet Name="tblDepartment" EntityType="Self.tblDepartment" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblEmployee" EntityType="Self.tblEmployee" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblLeave" EntityType="Self.tblLeave" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLeaveScheme" EntityType="Self.tblLeaveScheme" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLeaveSchemeItem" EntityType="Self.tblLeaveSchemeItem" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblPayroll" EntityType="Self.tblPayroll" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblPayrollBenefit" EntityType="Self.tblPayrollBenefit" Schema="dbo" store:Type="Tables" />
   </EntityContainer>

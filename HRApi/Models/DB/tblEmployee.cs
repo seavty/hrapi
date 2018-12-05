@@ -60,5 +60,7 @@ namespace HRApi.Models.DB
         public Nullable<decimal> empl_LeaveUsed { get; set; }
         public Nullable<decimal> empl_Leave { get; set; }
         public string empl_LeaveSchemeID { get; set; }
+        public string empl_PayrollBenefitID { get; set; }
+        public string empl_AdjustmentSchemeID { get; set; }
     }
 }

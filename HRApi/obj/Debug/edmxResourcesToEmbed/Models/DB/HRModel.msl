@@ -20,6 +20,8 @@
     <EntitySetMapping Name="tblEmployees">
       <EntityTypeMapping TypeName="HR_DHLModel.tblEmployee">
         <MappingFragment StoreEntitySet="tblEmployee">
+          <ScalarProperty Name="empl_AdjustmentSchemeID" ColumnName="empl_AdjustmentSchemeID" />
+          <ScalarProperty Name="empl_PayrollBenefitID" ColumnName="empl_PayrollBenefitID" />
           <ScalarProperty Name="empl_EmployeeID" ColumnName="empl_EmployeeID" />
           <ScalarProperty Name="empl_Deleted" ColumnName="empl_Deleted" />
           <ScalarProperty Name="empl_CreatedBy" ColumnName="empl_CreatedBy" />
@@ -120,6 +122,8 @@
     <EntitySetMapping Name="tblPayrollBenefits">
       <EntityTypeMapping TypeName="HR_DHLModel.tblPayrollBenefit">
         <MappingFragment StoreEntitySet="tblPayrollBenefit">
+          <ScalarProperty Name="prbf_AdjustmentItemID" ColumnName="prbf_AdjustmentItemID" />
+          <ScalarProperty Name="prbf_AdjustmentID" ColumnName="prbf_AdjustmentID" />
           <ScalarProperty Name="prbf_PayrollBenefitID" ColumnName="prbf_PayrollBenefitID" />
           <ScalarProperty Name="prbf_Deleted" ColumnName="prbf_Deleted" />
           <ScalarProperty Name="prbf_CreatedBy" ColumnName="prbf_CreatedBy" />
@@ -139,6 +143,43 @@
           <ScalarProperty Name="prbf_DepartmentID" ColumnName="prbf_DepartmentID" />
           <ScalarProperty Name="prbf_RecurrentID" ColumnName="prbf_RecurrentID" />
           <ScalarProperty Name="prbf_Status" ColumnName="prbf_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLeaveSchemes">
+      <EntityTypeMapping TypeName="HR_DHLModel.tblLeaveScheme">
+        <MappingFragment StoreEntitySet="tblLeaveScheme">
+          <ScalarProperty Name="lvsc_Note" ColumnName="lvsc_Note" />
+          <ScalarProperty Name="lvsc_Name" ColumnName="lvsc_Name" />
+          <ScalarProperty Name="lvsc_ZoneID" ColumnName="lvsc_ZoneID" />
+          <ScalarProperty Name="lvsc_WorkflowItemID" ColumnName="lvsc_WorkflowItemID" />
+          <ScalarProperty Name="lvsc_WorkflowID" ColumnName="lvsc_WorkflowID" />
+          <ScalarProperty Name="lvsc_UpdatedDate" ColumnName="lvsc_UpdatedDate" />
+          <ScalarProperty Name="lvsc_UpdatedBy" ColumnName="lvsc_UpdatedBy" />
+          <ScalarProperty Name="lvsc_CreatedDate" ColumnName="lvsc_CreatedDate" />
+          <ScalarProperty Name="lvsc_CreatedBy" ColumnName="lvsc_CreatedBy" />
+          <ScalarProperty Name="lvsc_Deleted" ColumnName="lvsc_Deleted" />
+          <ScalarProperty Name="lvsc_LeaveSchemeID" ColumnName="lvsc_LeaveSchemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLeaveSchemeItems">
+      <EntityTypeMapping TypeName="HR_DHLModel.tblLeaveSchemeItem">
+        <MappingFragment StoreEntitySet="tblLeaveSchemeItem">
+          <ScalarProperty Name="lvsi_LeaveSchemeID" ColumnName="lvsi_LeaveSchemeID" />
+          <ScalarProperty Name="lvsi_Order" ColumnName="lvsi_Order" />
+          <ScalarProperty Name="lvsi_EmployeeID" ColumnName="lvsi_EmployeeID" />
+          <ScalarProperty Name="lvsi_PositionID" ColumnName="lvsi_PositionID" />
+          <ScalarProperty Name="lvsi_Name" ColumnName="lvsi_Name" />
+          <ScalarProperty Name="lvsi_ZoneID" ColumnName="lvsi_ZoneID" />
+          <ScalarProperty Name="lvsi_WorkflowItemID" ColumnName="lvsi_WorkflowItemID" />
+          <ScalarProperty Name="lvsi_WorkflowID" ColumnName="lvsi_WorkflowID" />
+          <ScalarProperty Name="lvsi_UpdatedDate" ColumnName="lvsi_UpdatedDate" />
+          <ScalarProperty Name="lvsi_UpdatedBy" ColumnName="lvsi_UpdatedBy" />
+          <ScalarProperty Name="lvsi_CreatedDate" ColumnName="lvsi_CreatedDate" />
+          <ScalarProperty Name="lvsi_CreatedBy" ColumnName="lvsi_CreatedBy" />
+          <ScalarProperty Name="lvsi_Deleted" ColumnName="lvsi_Deleted" />
+          <ScalarProperty Name="lvsi_LeaveSchemeItemID" ColumnName="lvsi_LeaveSchemeItemID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

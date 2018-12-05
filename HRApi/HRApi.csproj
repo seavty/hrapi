@@ -225,6 +225,12 @@
     <Compile Include="Models\DB\tblLeave.cs">
       <DependentUpon>HRModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DB\tblLeaveScheme.cs">
+      <DependentUpon>HRModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DB\tblLeaveSchemeItem.cs">
+      <DependentUpon>HRModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\DB\tblPayroll.cs">
       <DependentUpon>HRModel.tt</DependentUpon>
     </Compile>
@@ -236,6 +242,14 @@
     <Compile Include="Models\DTO\Employee\EmployeeNewDTO.cs" />
     <Compile Include="Models\DTO\Employee\EmployeeViewDTO.cs" />
     <Compile Include="Models\DTO\GetListDTO.cs" />
+    <Compile Include="Models\DTO\LeaveSchemeItem\LeaveSchemeItemBaseDTO.cs" />
+    <Compile Include="Models\DTO\LeaveSchemeItem\LeaveSchemeItemEditDTO.cs" />
+    <Compile Include="Models\DTO\LeaveSchemeItem\LeaveSchemeItemNewDTO.cs" />
+    <Compile Include="Models\DTO\LeaveSchemeItem\LeaveSchemeItemViewDTO.cs" />
+    <Compile Include="Models\DTO\LeaveScheme\LeaveSchemeBaseDTO.cs" />
+    <Compile Include="Models\DTO\LeaveScheme\LeaveSchemeEditDTO.cs" />
+    <Compile Include="Models\DTO\LeaveScheme\LeaveSchemeNewDTO.cs" />
+    <Compile Include="Models\DTO\LeaveScheme\LeaveSchemeViewDTO.cs" />
     <Compile Include="Models\DTO\MetaDataDTO.cs" />
     <Compile Include="Models\DTO\Payroll\PayrollBaseDTO.cs" />
     <Compile Include="Models\DTO\Payroll\PayrollEditDTO.cs" />
@@ -247,6 +261,8 @@
     <Compile Include="Utils\Attribute\TokenValidationAttribute.cs" />
     <Compile Include="Utils\Extension\PagingExtension.cs" />
     <Compile Include="Utils\Handler\EmployeeHandler.cs" />
+    <Compile Include="Utils\Handler\LeaveSchemeHandler.cs" />
+    <Compile Include="Utils\Handler\LeaveSchemeItemHandler.cs" />
     <Compile Include="Utils\Handler\PayrollHandler.cs" />
     <Compile Include="Utils\Helper\ConstantHelper.cs" />
     <Compile Include="Utils\Helper\CryptLib.cs" />

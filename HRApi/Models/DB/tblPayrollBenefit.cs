@@ -33,5 +33,7 @@ namespace HRApi.Models.DB
         public Nullable<int> prbf_DepartmentID { get; set; }
         public Nullable<int> prbf_RecurrentID { get; set; }
         public string prbf_Status { get; set; }
+        public string prbf_AdjustmentID { get; set; }
+        public string prbf_AdjustmentItemID { get; set; }
     }
 }
