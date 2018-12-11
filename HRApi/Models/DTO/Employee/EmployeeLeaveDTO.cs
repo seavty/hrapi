@@ -15,5 +15,6 @@ namespace HRApi.Models.DTO.Employee
         public string leav_EmployeeID { get; set; }
         public DateTime? leav_ToDate { get; set; }
         public string leav_HalfDay { get; set; }
+        public DateTime? leav_Date { get; set; }
     }
 }
