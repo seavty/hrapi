@@ -36,7 +36,7 @@ namespace HRApi.Utils.Handler
                 throw new HttpException((int)HttpStatusCode.NotFound, ConstantHelper.RECORD_NOT_FOUND);
 
             var result = MappingHelper.MapDBClassToDTO<tblLeaveScheme, LeaveSchemeViewDTO>(record);
-            record.leav
+            //record.leav
             return MappingHelper.MapDBClassToDTO<tblPayroll, LeaveSchemeViewDTO>(record);
         }
 

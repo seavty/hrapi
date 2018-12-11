@@ -148,6 +148,7 @@
     <EntitySet Name="tblPayrollBenefits" EntityType="Self.tblPayrollBenefit" />
     <EntitySet Name="tblLeaveSchemes" EntityType="HR_DHLModel.tblLeaveScheme" />
     <EntitySet Name="tblLeaveSchemeItems" EntityType="HR_DHLModel.tblLeaveSchemeItem" />
+    <EntitySet Name="vEmployeePayrollAPIs" EntityType="HR_DHLModel.vEmployeePayrollAPI" />
   </EntityContainer>
   <EntityType Name="tblLeaveScheme">
     <Key>
@@ -183,5 +184,99 @@
     <Property Name="lvsi_EmployeeID" Type="Int32" />
     <Property Name="lvsi_Order" Type="Decimal" Precision="18" Scale="6" />
     <Property Name="lvsi_LeaveSchemeID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vEmployeePayrollAPI">
+    <Key>
+      <PropertyRef Name="payr_PayrollID" />
+      <PropertyRef Name="prit_PayrollItemID" />
+      <PropertyRef Name="empl_EmployeeID" />
+    </Key>
+    <Property Name="payr_PayrollID" Type="Int32" Nullable="false" />
+    <Property Name="payr_Deleted" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="payr_CreatedBy" Type="Int32" />
+    <Property Name="payr_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="payr_UpdatedBy" Type="Int32" />
+    <Property Name="payr_UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="payr_WorkflowID" Type="Int32" />
+    <Property Name="payr_WorkflowItemID" Type="Int32" />
+    <Property Name="payr_ZoneID" Type="Int32" />
+    <Property Name="payr_Date" Type="DateTime" Precision="3" />
+    <Property Name="payr_Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="payr_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="payr_NWD" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="payr_FrDate" Type="DateTime" Precision="3" />
+    <Property Name="payr_ToDate" Type="DateTime" Precision="3" />
+    <Property Name="payr_ExRate" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="prit_PayrollItemID" Type="Int32" Nullable="false" />
+    <Property Name="prit_Deleted" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="prit_CreatedBy" Type="Int32" />
+    <Property Name="prit_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="prit_UpdatedBy" Type="Int32" />
+    <Property Name="prit_UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="prit_WorkflowID" Type="Int32" />
+    <Property Name="prit_WorkflowItemID" Type="Int32" />
+    <Property Name="prit_ZoneID" Type="Int32" />
+    <Property Name="prit_PayrollID" Type="Int32" />
+    <Property Name="prit_EmployeeID" Type="Int32" />
+    <Property Name="prit_Salary" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="prit_AdjPlus" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="prit_AdjMinus" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="prit_SalaryR" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="prit_Spouse" Type="Int32" />
+    <Property Name="prit_Children" Type="Int32" />
+    <Property Name="prit_TaxRate" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="prit_Tax" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="prit_ReliefAmount" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="prit_TaxableIncome" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="prit_TaxableIncomeKH" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="prit_PositionID" Type="Int32" />
+    <Property Name="empl_EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="empl_Deleted" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="empl_CreatedBy" Type="Int32" />
+    <Property Name="empl_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="empl_UpdatedBy" Type="Int32" />
+    <Property Name="empl_UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="empl_WorkflowID" Type="Int32" />
+    <Property Name="empl_WorkflowItemID" Type="Int32" />
+    <Property Name="empl_ZoneID" Type="Int32" />
+    <Property Name="empl_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="empl_PositionID" Type="Int32" />
+    <Property Name="empl_HiringDate" Type="DateTime" Precision="3" />
+    <Property Name="empl_ConfirmationDate" Type="DateTime" Precision="3" />
+    <Property Name="empl_ResignDate" Type="DateTime" Precision="3" />
+    <Property Name="empl_DepartmentID" Type="Int32" />
+    <Property Name="empl_RootEmployeeID" Type="Int32" />
+    <Property Name="empl_WorkPermitNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_PayrollAccountNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_DOB" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="empl_NationalityID" Type="Int32" />
+    <Property Name="empl_VisaNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Religion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Phone2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Spouse" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_POB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="empl_IDCard" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Passport" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_NSSFNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Level" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_ProbationEnd" Type="DateTime" Precision="3" />
+    <Property Name="empl_Salary" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="empl_JD" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Children" Type="Int32" />
+    <Property Name="empl_ContractEndDate" Type="DateTime" Precision="3" />
+    <Property Name="empl_ContractType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Token" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="empl_Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="empl_LeaveBallance" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="empl_LeaveUsed" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="empl_Leave" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="empl_LeaveSchemeID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="empl_PayrollBenefitID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="empl_AdjustmentSchemeID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

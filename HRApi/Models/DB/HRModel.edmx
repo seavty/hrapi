@@ -180,6 +180,102 @@
           <Property Name="prbf_AdjustmentID" Type="nvarchar" MaxLength="200" />
           <Property Name="prbf_AdjustmentItemID" Type="nvarchar" MaxLength="200" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'HR_DHL.dbo.vEmployeePayrollAPI' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vEmployeePayrollAPI">
+          <Key>
+            <PropertyRef Name="payr_PayrollID" />
+            <PropertyRef Name="prit_PayrollItemID" />
+            <PropertyRef Name="empl_EmployeeID" />
+          </Key>
+          <Property Name="payr_PayrollID" Type="int" Nullable="false" />
+          <Property Name="payr_Deleted" Type="nvarchar" MaxLength="1" />
+          <Property Name="payr_CreatedBy" Type="int" />
+          <Property Name="payr_CreatedDate" Type="datetime" />
+          <Property Name="payr_UpdatedBy" Type="int" />
+          <Property Name="payr_UpdatedDate" Type="datetime" />
+          <Property Name="payr_WorkflowID" Type="int" />
+          <Property Name="payr_WorkflowItemID" Type="int" />
+          <Property Name="payr_ZoneID" Type="int" />
+          <Property Name="payr_Date" Type="datetime" />
+          <Property Name="payr_Note" Type="nvarchar" MaxLength="255" />
+          <Property Name="payr_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="payr_NWD" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="payr_FrDate" Type="datetime" />
+          <Property Name="payr_ToDate" Type="datetime" />
+          <Property Name="payr_ExRate" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="prit_PayrollItemID" Type="int" Nullable="false" />
+          <Property Name="prit_Deleted" Type="nvarchar" MaxLength="1" />
+          <Property Name="prit_CreatedBy" Type="int" />
+          <Property Name="prit_CreatedDate" Type="datetime" />
+          <Property Name="prit_UpdatedBy" Type="int" />
+          <Property Name="prit_UpdatedDate" Type="datetime" />
+          <Property Name="prit_WorkflowID" Type="int" />
+          <Property Name="prit_WorkflowItemID" Type="int" />
+          <Property Name="prit_ZoneID" Type="int" />
+          <Property Name="prit_PayrollID" Type="int" />
+          <Property Name="prit_EmployeeID" Type="int" />
+          <Property Name="prit_Salary" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="prit_AdjPlus" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="prit_AdjMinus" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="prit_SalaryR" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="prit_Spouse" Type="int" />
+          <Property Name="prit_Children" Type="int" />
+          <Property Name="prit_TaxRate" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="prit_Tax" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="prit_ReliefAmount" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="prit_TaxableIncome" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="prit_TaxableIncomeKH" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="prit_PositionID" Type="int" />
+          <Property Name="empl_EmployeeID" Type="int" Nullable="false" />
+          <Property Name="empl_Deleted" Type="nvarchar" MaxLength="1" />
+          <Property Name="empl_CreatedBy" Type="int" />
+          <Property Name="empl_CreatedDate" Type="datetime" />
+          <Property Name="empl_UpdatedBy" Type="int" />
+          <Property Name="empl_UpdatedDate" Type="datetime" />
+          <Property Name="empl_WorkflowID" Type="int" />
+          <Property Name="empl_WorkflowItemID" Type="int" />
+          <Property Name="empl_ZoneID" Type="int" />
+          <Property Name="empl_Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="empl_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="empl_PositionID" Type="int" />
+          <Property Name="empl_HiringDate" Type="datetime" />
+          <Property Name="empl_ConfirmationDate" Type="datetime" />
+          <Property Name="empl_ResignDate" Type="datetime" />
+          <Property Name="empl_DepartmentID" Type="int" />
+          <Property Name="empl_RootEmployeeID" Type="int" />
+          <Property Name="empl_WorkPermitNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="empl_PayrollAccountNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="empl_DOB" Type="nvarchar" MaxLength="20" />
+          <Property Name="empl_NationalityID" Type="int" />
+          <Property Name="empl_VisaNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="empl_Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="empl_Religion" Type="nvarchar" MaxLength="50" />
+          <Property Name="empl_Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="empl_Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="empl_Phone2" Type="nvarchar" MaxLength="50" />
+          <Property Name="empl_Spouse" Type="nvarchar" MaxLength="255" />
+          <Property Name="empl_Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="empl_POB" Type="nvarchar" MaxLength="255" />
+          <Property Name="empl_IDCard" Type="nvarchar" MaxLength="50" />
+          <Property Name="empl_Passport" Type="nvarchar" MaxLength="50" />
+          <Property Name="empl_NSSFNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="empl_Level" Type="nvarchar" MaxLength="50" />
+          <Property Name="empl_ProbationEnd" Type="datetime" />
+          <Property Name="empl_Salary" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="empl_JD" Type="nvarchar" MaxLength="500" />
+          <Property Name="empl_Children" Type="int" />
+          <Property Name="empl_ContractEndDate" Type="datetime" />
+          <Property Name="empl_ContractType" Type="nvarchar" MaxLength="50" />
+          <Property Name="empl_Token" Type="nvarchar" MaxLength="255" />
+          <Property Name="empl_Password" Type="nvarchar" MaxLength="255" />
+          <Property Name="empl_LeaveBallance" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="empl_LeaveUsed" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="empl_Leave" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="empl_LeaveSchemeID" Type="nvarchar" MaxLength="200" />
+          <Property Name="empl_PayrollBenefitID" Type="nvarchar" MaxLength="200" />
+          <Property Name="empl_AdjustmentSchemeID" Type="nvarchar" MaxLength="200" />
+        </EntityType>
         <EntityContainer Name="HR_DHLModelStoreContainer">
           <EntitySet Name="tblDepartment" EntityType="Self.tblDepartment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblEmployee" EntityType="Self.tblEmployee" Schema="dbo" store:Type="Tables" />
@@ -188,6 +284,97 @@
           <EntitySet Name="tblLeaveSchemeItem" EntityType="Self.tblLeaveSchemeItem" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblPayroll" EntityType="Self.tblPayroll" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblPayrollBenefit" EntityType="Self.tblPayrollBenefit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vEmployeePayrollAPI" EntityType="Self.vEmployeePayrollAPI" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vEmployeePayrollAPI].[payr_PayrollID] AS [payr_PayrollID], 
+    [vEmployeePayrollAPI].[payr_Deleted] AS [payr_Deleted], 
+    [vEmployeePayrollAPI].[payr_CreatedBy] AS [payr_CreatedBy], 
+    [vEmployeePayrollAPI].[payr_CreatedDate] AS [payr_CreatedDate], 
+    [vEmployeePayrollAPI].[payr_UpdatedBy] AS [payr_UpdatedBy], 
+    [vEmployeePayrollAPI].[payr_UpdatedDate] AS [payr_UpdatedDate], 
+    [vEmployeePayrollAPI].[payr_WorkflowID] AS [payr_WorkflowID], 
+    [vEmployeePayrollAPI].[payr_WorkflowItemID] AS [payr_WorkflowItemID], 
+    [vEmployeePayrollAPI].[payr_ZoneID] AS [payr_ZoneID], 
+    [vEmployeePayrollAPI].[payr_Date] AS [payr_Date], 
+    [vEmployeePayrollAPI].[payr_Note] AS [payr_Note], 
+    [vEmployeePayrollAPI].[payr_Name] AS [payr_Name], 
+    [vEmployeePayrollAPI].[payr_NWD] AS [payr_NWD], 
+    [vEmployeePayrollAPI].[payr_FrDate] AS [payr_FrDate], 
+    [vEmployeePayrollAPI].[payr_ToDate] AS [payr_ToDate], 
+    [vEmployeePayrollAPI].[payr_ExRate] AS [payr_ExRate], 
+    [vEmployeePayrollAPI].[prit_PayrollItemID] AS [prit_PayrollItemID], 
+    [vEmployeePayrollAPI].[prit_Deleted] AS [prit_Deleted], 
+    [vEmployeePayrollAPI].[prit_CreatedBy] AS [prit_CreatedBy], 
+    [vEmployeePayrollAPI].[prit_CreatedDate] AS [prit_CreatedDate], 
+    [vEmployeePayrollAPI].[prit_UpdatedBy] AS [prit_UpdatedBy], 
+    [vEmployeePayrollAPI].[prit_UpdatedDate] AS [prit_UpdatedDate], 
+    [vEmployeePayrollAPI].[prit_WorkflowID] AS [prit_WorkflowID], 
+    [vEmployeePayrollAPI].[prit_WorkflowItemID] AS [prit_WorkflowItemID], 
+    [vEmployeePayrollAPI].[prit_ZoneID] AS [prit_ZoneID], 
+    [vEmployeePayrollAPI].[prit_PayrollID] AS [prit_PayrollID], 
+    [vEmployeePayrollAPI].[prit_EmployeeID] AS [prit_EmployeeID], 
+    [vEmployeePayrollAPI].[prit_Salary] AS [prit_Salary], 
+    [vEmployeePayrollAPI].[prit_AdjPlus] AS [prit_AdjPlus], 
+    [vEmployeePayrollAPI].[prit_AdjMinus] AS [prit_AdjMinus], 
+    [vEmployeePayrollAPI].[prit_SalaryR] AS [prit_SalaryR], 
+    [vEmployeePayrollAPI].[prit_Spouse] AS [prit_Spouse], 
+    [vEmployeePayrollAPI].[prit_Children] AS [prit_Children], 
+    [vEmployeePayrollAPI].[prit_TaxRate] AS [prit_TaxRate], 
+    [vEmployeePayrollAPI].[prit_Tax] AS [prit_Tax], 
+    [vEmployeePayrollAPI].[prit_ReliefAmount] AS [prit_ReliefAmount], 
+    [vEmployeePayrollAPI].[prit_TaxableIncome] AS [prit_TaxableIncome], 
+    [vEmployeePayrollAPI].[prit_TaxableIncomeKH] AS [prit_TaxableIncomeKH], 
+    [vEmployeePayrollAPI].[prit_PositionID] AS [prit_PositionID], 
+    [vEmployeePayrollAPI].[empl_EmployeeID] AS [empl_EmployeeID], 
+    [vEmployeePayrollAPI].[empl_Deleted] AS [empl_Deleted], 
+    [vEmployeePayrollAPI].[empl_CreatedBy] AS [empl_CreatedBy], 
+    [vEmployeePayrollAPI].[empl_CreatedDate] AS [empl_CreatedDate], 
+    [vEmployeePayrollAPI].[empl_UpdatedBy] AS [empl_UpdatedBy], 
+    [vEmployeePayrollAPI].[empl_UpdatedDate] AS [empl_UpdatedDate], 
+    [vEmployeePayrollAPI].[empl_WorkflowID] AS [empl_WorkflowID], 
+    [vEmployeePayrollAPI].[empl_WorkflowItemID] AS [empl_WorkflowItemID], 
+    [vEmployeePayrollAPI].[empl_ZoneID] AS [empl_ZoneID], 
+    [vEmployeePayrollAPI].[empl_Code] AS [empl_Code], 
+    [vEmployeePayrollAPI].[empl_Name] AS [empl_Name], 
+    [vEmployeePayrollAPI].[empl_PositionID] AS [empl_PositionID], 
+    [vEmployeePayrollAPI].[empl_HiringDate] AS [empl_HiringDate], 
+    [vEmployeePayrollAPI].[empl_ConfirmationDate] AS [empl_ConfirmationDate], 
+    [vEmployeePayrollAPI].[empl_ResignDate] AS [empl_ResignDate], 
+    [vEmployeePayrollAPI].[empl_DepartmentID] AS [empl_DepartmentID], 
+    [vEmployeePayrollAPI].[empl_RootEmployeeID] AS [empl_RootEmployeeID], 
+    [vEmployeePayrollAPI].[empl_WorkPermitNo] AS [empl_WorkPermitNo], 
+    [vEmployeePayrollAPI].[empl_PayrollAccountNo] AS [empl_PayrollAccountNo], 
+    [vEmployeePayrollAPI].[empl_DOB] AS [empl_DOB], 
+    [vEmployeePayrollAPI].[empl_NationalityID] AS [empl_NationalityID], 
+    [vEmployeePayrollAPI].[empl_VisaNo] AS [empl_VisaNo], 
+    [vEmployeePayrollAPI].[empl_Address] AS [empl_Address], 
+    [vEmployeePayrollAPI].[empl_Religion] AS [empl_Religion], 
+    [vEmployeePayrollAPI].[empl_Email] AS [empl_Email], 
+    [vEmployeePayrollAPI].[empl_Phone] AS [empl_Phone], 
+    [vEmployeePayrollAPI].[empl_Phone2] AS [empl_Phone2], 
+    [vEmployeePayrollAPI].[empl_Spouse] AS [empl_Spouse], 
+    [vEmployeePayrollAPI].[empl_Gender] AS [empl_Gender], 
+    [vEmployeePayrollAPI].[empl_POB] AS [empl_POB], 
+    [vEmployeePayrollAPI].[empl_IDCard] AS [empl_IDCard], 
+    [vEmployeePayrollAPI].[empl_Passport] AS [empl_Passport], 
+    [vEmployeePayrollAPI].[empl_NSSFNo] AS [empl_NSSFNo], 
+    [vEmployeePayrollAPI].[empl_Level] AS [empl_Level], 
+    [vEmployeePayrollAPI].[empl_ProbationEnd] AS [empl_ProbationEnd], 
+    [vEmployeePayrollAPI].[empl_Salary] AS [empl_Salary], 
+    [vEmployeePayrollAPI].[empl_JD] AS [empl_JD], 
+    [vEmployeePayrollAPI].[empl_Children] AS [empl_Children], 
+    [vEmployeePayrollAPI].[empl_ContractEndDate] AS [empl_ContractEndDate], 
+    [vEmployeePayrollAPI].[empl_ContractType] AS [empl_ContractType], 
+    [vEmployeePayrollAPI].[empl_Token] AS [empl_Token], 
+    [vEmployeePayrollAPI].[empl_Password] AS [empl_Password], 
+    [vEmployeePayrollAPI].[empl_LeaveBallance] AS [empl_LeaveBallance], 
+    [vEmployeePayrollAPI].[empl_LeaveUsed] AS [empl_LeaveUsed], 
+    [vEmployeePayrollAPI].[empl_Leave] AS [empl_Leave], 
+    [vEmployeePayrollAPI].[empl_LeaveSchemeID] AS [empl_LeaveSchemeID], 
+    [vEmployeePayrollAPI].[empl_PayrollBenefitID] AS [empl_PayrollBenefitID], 
+    [vEmployeePayrollAPI].[empl_AdjustmentSchemeID] AS [empl_AdjustmentSchemeID]
+    FROM [dbo].[vEmployeePayrollAPI] AS [vEmployeePayrollAPI]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -341,6 +528,7 @@
           <EntitySet Name="tblPayrollBenefits" EntityType="Self.tblPayrollBenefit" />
           <EntitySet Name="tblLeaveSchemes" EntityType="HR_DHLModel.tblLeaveScheme" />
           <EntitySet Name="tblLeaveSchemeItems" EntityType="HR_DHLModel.tblLeaveSchemeItem" />
+          <EntitySet Name="vEmployeePayrollAPIs" EntityType="HR_DHLModel.vEmployeePayrollAPI" />
         </EntityContainer>
         <EntityType Name="tblLeaveScheme">
           <Key>
@@ -376,6 +564,100 @@
           <Property Name="lvsi_EmployeeID" Type="Int32" />
           <Property Name="lvsi_Order" Type="Decimal" Precision="18" Scale="6" />
           <Property Name="lvsi_LeaveSchemeID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="vEmployeePayrollAPI">
+          <Key>
+            <PropertyRef Name="payr_PayrollID" />
+            <PropertyRef Name="prit_PayrollItemID" />
+            <PropertyRef Name="empl_EmployeeID" />
+          </Key>
+          <Property Name="payr_PayrollID" Type="Int32" Nullable="false" />
+          <Property Name="payr_Deleted" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="payr_CreatedBy" Type="Int32" />
+          <Property Name="payr_CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="payr_UpdatedBy" Type="Int32" />
+          <Property Name="payr_UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="payr_WorkflowID" Type="Int32" />
+          <Property Name="payr_WorkflowItemID" Type="Int32" />
+          <Property Name="payr_ZoneID" Type="Int32" />
+          <Property Name="payr_Date" Type="DateTime" Precision="3" />
+          <Property Name="payr_Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="payr_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="payr_NWD" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="payr_FrDate" Type="DateTime" Precision="3" />
+          <Property Name="payr_ToDate" Type="DateTime" Precision="3" />
+          <Property Name="payr_ExRate" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="prit_PayrollItemID" Type="Int32" Nullable="false" />
+          <Property Name="prit_Deleted" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="prit_CreatedBy" Type="Int32" />
+          <Property Name="prit_CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="prit_UpdatedBy" Type="Int32" />
+          <Property Name="prit_UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="prit_WorkflowID" Type="Int32" />
+          <Property Name="prit_WorkflowItemID" Type="Int32" />
+          <Property Name="prit_ZoneID" Type="Int32" />
+          <Property Name="prit_PayrollID" Type="Int32" />
+          <Property Name="prit_EmployeeID" Type="Int32" />
+          <Property Name="prit_Salary" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="prit_AdjPlus" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="prit_AdjMinus" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="prit_SalaryR" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="prit_Spouse" Type="Int32" />
+          <Property Name="prit_Children" Type="Int32" />
+          <Property Name="prit_TaxRate" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="prit_Tax" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="prit_ReliefAmount" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="prit_TaxableIncome" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="prit_TaxableIncomeKH" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="prit_PositionID" Type="Int32" />
+          <Property Name="empl_EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="empl_Deleted" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="empl_CreatedBy" Type="Int32" />
+          <Property Name="empl_CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="empl_UpdatedBy" Type="Int32" />
+          <Property Name="empl_UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="empl_WorkflowID" Type="Int32" />
+          <Property Name="empl_WorkflowItemID" Type="Int32" />
+          <Property Name="empl_ZoneID" Type="Int32" />
+          <Property Name="empl_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="empl_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="empl_PositionID" Type="Int32" />
+          <Property Name="empl_HiringDate" Type="DateTime" Precision="3" />
+          <Property Name="empl_ConfirmationDate" Type="DateTime" Precision="3" />
+          <Property Name="empl_ResignDate" Type="DateTime" Precision="3" />
+          <Property Name="empl_DepartmentID" Type="Int32" />
+          <Property Name="empl_RootEmployeeID" Type="Int32" />
+          <Property Name="empl_WorkPermitNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="empl_PayrollAccountNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="empl_DOB" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="empl_NationalityID" Type="Int32" />
+          <Property Name="empl_VisaNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="empl_Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="empl_Religion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="empl_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="empl_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="empl_Phone2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="empl_Spouse" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="empl_Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="empl_POB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="empl_IDCard" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="empl_Passport" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="empl_NSSFNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="empl_Level" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="empl_ProbationEnd" Type="DateTime" Precision="3" />
+          <Property Name="empl_Salary" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="empl_JD" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="empl_Children" Type="Int32" />
+          <Property Name="empl_ContractEndDate" Type="DateTime" Precision="3" />
+          <Property Name="empl_ContractType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="empl_Token" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="empl_Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="empl_LeaveBallance" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="empl_LeaveUsed" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="empl_Leave" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="empl_LeaveSchemeID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="empl_PayrollBenefitID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="empl_AdjustmentSchemeID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -562,6 +844,99 @@
                 <ScalarProperty Name="lvsi_CreatedBy" ColumnName="lvsi_CreatedBy" />
                 <ScalarProperty Name="lvsi_Deleted" ColumnName="lvsi_Deleted" />
                 <ScalarProperty Name="lvsi_LeaveSchemeItemID" ColumnName="lvsi_LeaveSchemeItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vEmployeePayrollAPIs">
+            <EntityTypeMapping TypeName="HR_DHLModel.vEmployeePayrollAPI">
+              <MappingFragment StoreEntitySet="vEmployeePayrollAPI">
+                <ScalarProperty Name="empl_AdjustmentSchemeID" ColumnName="empl_AdjustmentSchemeID" />
+                <ScalarProperty Name="empl_PayrollBenefitID" ColumnName="empl_PayrollBenefitID" />
+                <ScalarProperty Name="empl_LeaveSchemeID" ColumnName="empl_LeaveSchemeID" />
+                <ScalarProperty Name="empl_Leave" ColumnName="empl_Leave" />
+                <ScalarProperty Name="empl_LeaveUsed" ColumnName="empl_LeaveUsed" />
+                <ScalarProperty Name="empl_LeaveBallance" ColumnName="empl_LeaveBallance" />
+                <ScalarProperty Name="empl_Password" ColumnName="empl_Password" />
+                <ScalarProperty Name="empl_Token" ColumnName="empl_Token" />
+                <ScalarProperty Name="empl_ContractType" ColumnName="empl_ContractType" />
+                <ScalarProperty Name="empl_ContractEndDate" ColumnName="empl_ContractEndDate" />
+                <ScalarProperty Name="empl_Children" ColumnName="empl_Children" />
+                <ScalarProperty Name="empl_JD" ColumnName="empl_JD" />
+                <ScalarProperty Name="empl_Salary" ColumnName="empl_Salary" />
+                <ScalarProperty Name="empl_ProbationEnd" ColumnName="empl_ProbationEnd" />
+                <ScalarProperty Name="empl_Level" ColumnName="empl_Level" />
+                <ScalarProperty Name="empl_NSSFNo" ColumnName="empl_NSSFNo" />
+                <ScalarProperty Name="empl_Passport" ColumnName="empl_Passport" />
+                <ScalarProperty Name="empl_IDCard" ColumnName="empl_IDCard" />
+                <ScalarProperty Name="empl_POB" ColumnName="empl_POB" />
+                <ScalarProperty Name="empl_Gender" ColumnName="empl_Gender" />
+                <ScalarProperty Name="empl_Spouse" ColumnName="empl_Spouse" />
+                <ScalarProperty Name="empl_Phone2" ColumnName="empl_Phone2" />
+                <ScalarProperty Name="empl_Phone" ColumnName="empl_Phone" />
+                <ScalarProperty Name="empl_Email" ColumnName="empl_Email" />
+                <ScalarProperty Name="empl_Religion" ColumnName="empl_Religion" />
+                <ScalarProperty Name="empl_Address" ColumnName="empl_Address" />
+                <ScalarProperty Name="empl_VisaNo" ColumnName="empl_VisaNo" />
+                <ScalarProperty Name="empl_NationalityID" ColumnName="empl_NationalityID" />
+                <ScalarProperty Name="empl_DOB" ColumnName="empl_DOB" />
+                <ScalarProperty Name="empl_PayrollAccountNo" ColumnName="empl_PayrollAccountNo" />
+                <ScalarProperty Name="empl_WorkPermitNo" ColumnName="empl_WorkPermitNo" />
+                <ScalarProperty Name="empl_RootEmployeeID" ColumnName="empl_RootEmployeeID" />
+                <ScalarProperty Name="empl_DepartmentID" ColumnName="empl_DepartmentID" />
+                <ScalarProperty Name="empl_ResignDate" ColumnName="empl_ResignDate" />
+                <ScalarProperty Name="empl_ConfirmationDate" ColumnName="empl_ConfirmationDate" />
+                <ScalarProperty Name="empl_HiringDate" ColumnName="empl_HiringDate" />
+                <ScalarProperty Name="empl_PositionID" ColumnName="empl_PositionID" />
+                <ScalarProperty Name="empl_Name" ColumnName="empl_Name" />
+                <ScalarProperty Name="empl_Code" ColumnName="empl_Code" />
+                <ScalarProperty Name="empl_ZoneID" ColumnName="empl_ZoneID" />
+                <ScalarProperty Name="empl_WorkflowItemID" ColumnName="empl_WorkflowItemID" />
+                <ScalarProperty Name="empl_WorkflowID" ColumnName="empl_WorkflowID" />
+                <ScalarProperty Name="empl_UpdatedDate" ColumnName="empl_UpdatedDate" />
+                <ScalarProperty Name="empl_UpdatedBy" ColumnName="empl_UpdatedBy" />
+                <ScalarProperty Name="empl_CreatedDate" ColumnName="empl_CreatedDate" />
+                <ScalarProperty Name="empl_CreatedBy" ColumnName="empl_CreatedBy" />
+                <ScalarProperty Name="empl_Deleted" ColumnName="empl_Deleted" />
+                <ScalarProperty Name="empl_EmployeeID" ColumnName="empl_EmployeeID" />
+                <ScalarProperty Name="prit_PositionID" ColumnName="prit_PositionID" />
+                <ScalarProperty Name="prit_TaxableIncomeKH" ColumnName="prit_TaxableIncomeKH" />
+                <ScalarProperty Name="prit_TaxableIncome" ColumnName="prit_TaxableIncome" />
+                <ScalarProperty Name="prit_ReliefAmount" ColumnName="prit_ReliefAmount" />
+                <ScalarProperty Name="prit_Tax" ColumnName="prit_Tax" />
+                <ScalarProperty Name="prit_TaxRate" ColumnName="prit_TaxRate" />
+                <ScalarProperty Name="prit_Children" ColumnName="prit_Children" />
+                <ScalarProperty Name="prit_Spouse" ColumnName="prit_Spouse" />
+                <ScalarProperty Name="prit_SalaryR" ColumnName="prit_SalaryR" />
+                <ScalarProperty Name="prit_AdjMinus" ColumnName="prit_AdjMinus" />
+                <ScalarProperty Name="prit_AdjPlus" ColumnName="prit_AdjPlus" />
+                <ScalarProperty Name="prit_Salary" ColumnName="prit_Salary" />
+                <ScalarProperty Name="prit_EmployeeID" ColumnName="prit_EmployeeID" />
+                <ScalarProperty Name="prit_PayrollID" ColumnName="prit_PayrollID" />
+                <ScalarProperty Name="prit_ZoneID" ColumnName="prit_ZoneID" />
+                <ScalarProperty Name="prit_WorkflowItemID" ColumnName="prit_WorkflowItemID" />
+                <ScalarProperty Name="prit_WorkflowID" ColumnName="prit_WorkflowID" />
+                <ScalarProperty Name="prit_UpdatedDate" ColumnName="prit_UpdatedDate" />
+                <ScalarProperty Name="prit_UpdatedBy" ColumnName="prit_UpdatedBy" />
+                <ScalarProperty Name="prit_CreatedDate" ColumnName="prit_CreatedDate" />
+                <ScalarProperty Name="prit_CreatedBy" ColumnName="prit_CreatedBy" />
+                <ScalarProperty Name="prit_Deleted" ColumnName="prit_Deleted" />
+                <ScalarProperty Name="prit_PayrollItemID" ColumnName="prit_PayrollItemID" />
+                <ScalarProperty Name="payr_ExRate" ColumnName="payr_ExRate" />
+                <ScalarProperty Name="payr_ToDate" ColumnName="payr_ToDate" />
+                <ScalarProperty Name="payr_FrDate" ColumnName="payr_FrDate" />
+                <ScalarProperty Name="payr_NWD" ColumnName="payr_NWD" />
+                <ScalarProperty Name="payr_Name" ColumnName="payr_Name" />
+                <ScalarProperty Name="payr_Note" ColumnName="payr_Note" />
+                <ScalarProperty Name="payr_Date" ColumnName="payr_Date" />
+                <ScalarProperty Name="payr_ZoneID" ColumnName="payr_ZoneID" />
+                <ScalarProperty Name="payr_WorkflowItemID" ColumnName="payr_WorkflowItemID" />
+                <ScalarProperty Name="payr_WorkflowID" ColumnName="payr_WorkflowID" />
+                <ScalarProperty Name="payr_UpdatedDate" ColumnName="payr_UpdatedDate" />
+                <ScalarProperty Name="payr_UpdatedBy" ColumnName="payr_UpdatedBy" />
+                <ScalarProperty Name="payr_CreatedDate" ColumnName="payr_CreatedDate" />
+                <ScalarProperty Name="payr_CreatedBy" ColumnName="payr_CreatedBy" />
+                <ScalarProperty Name="payr_Deleted" ColumnName="payr_Deleted" />
+                <ScalarProperty Name="payr_PayrollID" ColumnName="payr_PayrollID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

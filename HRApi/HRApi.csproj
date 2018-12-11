@@ -237,9 +237,14 @@
     <Compile Include="Models\DB\tblPayrollBenefit.cs">
       <DependentUpon>HRModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DB\vEmployeePayrollAPI.cs">
+      <DependentUpon>HRModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\DTO\Employee\EmployeeBaseDTO.cs" />
     <Compile Include="Models\DTO\Employee\EmployeeEditDTO.cs" />
+    <Compile Include="Models\DTO\Employee\EmployeeLeaveDTO.cs" />
     <Compile Include="Models\DTO\Employee\EmployeeNewDTO.cs" />
+    <Compile Include="Models\DTO\Employee\EmployeePayrollDTO.cs" />
     <Compile Include="Models\DTO\Employee\EmployeeViewDTO.cs" />
     <Compile Include="Models\DTO\GetListDTO.cs" />
     <Compile Include="Models\DTO\LeaveSchemeItem\LeaveSchemeItemBaseDTO.cs" />
@@ -321,6 +326,7 @@
     <Content Include="Models\DB\HRModel.edmx.diagram">
       <DependentUpon>HRModel.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

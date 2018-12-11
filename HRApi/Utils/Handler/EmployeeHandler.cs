@@ -36,6 +36,43 @@ namespace HRApi.Utils.Handler
             return MappingHelper.MapDBClassToDTO<tblEmployee, EmployeeViewDTO>(record);
         }
 
+        //=> EmployeePayroll
+        public async Task<GetListDTO<EmployeePayrollDTO>> EmployeePayroll(int empID, int currentPage)
+        {
+            var query = db.vEmployeePayrollAPIs.Where(x => x.empl_EmployeeID == empID).OrderByDescending(x => x.payr_FrDate);
+            var records = await query.Page(currentPage).ToListAsync();
+
+            var myList = new List<EmployeePayrollDTO>();
+            foreach (var record in records)
+            {
+                myList.Add(MappingHelper.MapDBClassToDTO<vEmployeePayrollAPI, EmployeePayrollDTO>(record));
+            }
+            var getList = new GetListDTO<EmployeePayrollDTO>();
+            getList.metaData = await PaginationHelper.GetMetaData(currentPage, query, "name", "asc", null);
+            getList.results = myList;
+
+            return getList;
+        }
+
+        //=>
+        public async Task<GetListDTO<EmployeeLeaveDTO>> EmployeeLeave(int empID, int currentPage)
+        {
+            var query = db.tblLeaves.Where(x => x.leav_EmployeeID == empID.ToString()).OrderByDescending(x => x.leav_Date);
+            var records = await query.Page(currentPage).ToListAsync();
+
+            var myList = new List<EmployeeLeaveDTO>();
+            foreach (var record in records)
+            {
+                myList.Add(MappingHelper.MapDBClassToDTO<tblLeave, EmployeeLeaveDTO>(record));
+            }
+            var getList = new GetListDTO<EmployeeLeaveDTO>();
+            getList.metaData = await PaginationHelper.GetMetaData(currentPage, query, "name", "asc", null);
+            getList.results = myList;
+
+            return getList;
+        }
+
+
         //=> GetList
         public async Task<GetListDTO<EmployeeViewDTO>> GetList(int currentPage)
         {

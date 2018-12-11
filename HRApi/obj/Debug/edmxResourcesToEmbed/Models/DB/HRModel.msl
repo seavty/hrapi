@@ -183,5 +183,98 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="vEmployeePayrollAPIs">
+      <EntityTypeMapping TypeName="HR_DHLModel.vEmployeePayrollAPI">
+        <MappingFragment StoreEntitySet="vEmployeePayrollAPI">
+          <ScalarProperty Name="empl_AdjustmentSchemeID" ColumnName="empl_AdjustmentSchemeID" />
+          <ScalarProperty Name="empl_PayrollBenefitID" ColumnName="empl_PayrollBenefitID" />
+          <ScalarProperty Name="empl_LeaveSchemeID" ColumnName="empl_LeaveSchemeID" />
+          <ScalarProperty Name="empl_Leave" ColumnName="empl_Leave" />
+          <ScalarProperty Name="empl_LeaveUsed" ColumnName="empl_LeaveUsed" />
+          <ScalarProperty Name="empl_LeaveBallance" ColumnName="empl_LeaveBallance" />
+          <ScalarProperty Name="empl_Password" ColumnName="empl_Password" />
+          <ScalarProperty Name="empl_Token" ColumnName="empl_Token" />
+          <ScalarProperty Name="empl_ContractType" ColumnName="empl_ContractType" />
+          <ScalarProperty Name="empl_ContractEndDate" ColumnName="empl_ContractEndDate" />
+          <ScalarProperty Name="empl_Children" ColumnName="empl_Children" />
+          <ScalarProperty Name="empl_JD" ColumnName="empl_JD" />
+          <ScalarProperty Name="empl_Salary" ColumnName="empl_Salary" />
+          <ScalarProperty Name="empl_ProbationEnd" ColumnName="empl_ProbationEnd" />
+          <ScalarProperty Name="empl_Level" ColumnName="empl_Level" />
+          <ScalarProperty Name="empl_NSSFNo" ColumnName="empl_NSSFNo" />
+          <ScalarProperty Name="empl_Passport" ColumnName="empl_Passport" />
+          <ScalarProperty Name="empl_IDCard" ColumnName="empl_IDCard" />
+          <ScalarProperty Name="empl_POB" ColumnName="empl_POB" />
+          <ScalarProperty Name="empl_Gender" ColumnName="empl_Gender" />
+          <ScalarProperty Name="empl_Spouse" ColumnName="empl_Spouse" />
+          <ScalarProperty Name="empl_Phone2" ColumnName="empl_Phone2" />
+          <ScalarProperty Name="empl_Phone" ColumnName="empl_Phone" />
+          <ScalarProperty Name="empl_Email" ColumnName="empl_Email" />
+          <ScalarProperty Name="empl_Religion" ColumnName="empl_Religion" />
+          <ScalarProperty Name="empl_Address" ColumnName="empl_Address" />
+          <ScalarProperty Name="empl_VisaNo" ColumnName="empl_VisaNo" />
+          <ScalarProperty Name="empl_NationalityID" ColumnName="empl_NationalityID" />
+          <ScalarProperty Name="empl_DOB" ColumnName="empl_DOB" />
+          <ScalarProperty Name="empl_PayrollAccountNo" ColumnName="empl_PayrollAccountNo" />
+          <ScalarProperty Name="empl_WorkPermitNo" ColumnName="empl_WorkPermitNo" />
+          <ScalarProperty Name="empl_RootEmployeeID" ColumnName="empl_RootEmployeeID" />
+          <ScalarProperty Name="empl_DepartmentID" ColumnName="empl_DepartmentID" />
+          <ScalarProperty Name="empl_ResignDate" ColumnName="empl_ResignDate" />
+          <ScalarProperty Name="empl_ConfirmationDate" ColumnName="empl_ConfirmationDate" />
+          <ScalarProperty Name="empl_HiringDate" ColumnName="empl_HiringDate" />
+          <ScalarProperty Name="empl_PositionID" ColumnName="empl_PositionID" />
+          <ScalarProperty Name="empl_Name" ColumnName="empl_Name" />
+          <ScalarProperty Name="empl_Code" ColumnName="empl_Code" />
+          <ScalarProperty Name="empl_ZoneID" ColumnName="empl_ZoneID" />
+          <ScalarProperty Name="empl_WorkflowItemID" ColumnName="empl_WorkflowItemID" />
+          <ScalarProperty Name="empl_WorkflowID" ColumnName="empl_WorkflowID" />
+          <ScalarProperty Name="empl_UpdatedDate" ColumnName="empl_UpdatedDate" />
+          <ScalarProperty Name="empl_UpdatedBy" ColumnName="empl_UpdatedBy" />
+          <ScalarProperty Name="empl_CreatedDate" ColumnName="empl_CreatedDate" />
+          <ScalarProperty Name="empl_CreatedBy" ColumnName="empl_CreatedBy" />
+          <ScalarProperty Name="empl_Deleted" ColumnName="empl_Deleted" />
+          <ScalarProperty Name="empl_EmployeeID" ColumnName="empl_EmployeeID" />
+          <ScalarProperty Name="prit_PositionID" ColumnName="prit_PositionID" />
+          <ScalarProperty Name="prit_TaxableIncomeKH" ColumnName="prit_TaxableIncomeKH" />
+          <ScalarProperty Name="prit_TaxableIncome" ColumnName="prit_TaxableIncome" />
+          <ScalarProperty Name="prit_ReliefAmount" ColumnName="prit_ReliefAmount" />
+          <ScalarProperty Name="prit_Tax" ColumnName="prit_Tax" />
+          <ScalarProperty Name="prit_TaxRate" ColumnName="prit_TaxRate" />
+          <ScalarProperty Name="prit_Children" ColumnName="prit_Children" />
+          <ScalarProperty Name="prit_Spouse" ColumnName="prit_Spouse" />
+          <ScalarProperty Name="prit_SalaryR" ColumnName="prit_SalaryR" />
+          <ScalarProperty Name="prit_AdjMinus" ColumnName="prit_AdjMinus" />
+          <ScalarProperty Name="prit_AdjPlus" ColumnName="prit_AdjPlus" />
+          <ScalarProperty Name="prit_Salary" ColumnName="prit_Salary" />
+          <ScalarProperty Name="prit_EmployeeID" ColumnName="prit_EmployeeID" />
+          <ScalarProperty Name="prit_PayrollID" ColumnName="prit_PayrollID" />
+          <ScalarProperty Name="prit_ZoneID" ColumnName="prit_ZoneID" />
+          <ScalarProperty Name="prit_WorkflowItemID" ColumnName="prit_WorkflowItemID" />
+          <ScalarProperty Name="prit_WorkflowID" ColumnName="prit_WorkflowID" />
+          <ScalarProperty Name="prit_UpdatedDate" ColumnName="prit_UpdatedDate" />
+          <ScalarProperty Name="prit_UpdatedBy" ColumnName="prit_UpdatedBy" />
+          <ScalarProperty Name="prit_CreatedDate" ColumnName="prit_CreatedDate" />
+          <ScalarProperty Name="prit_CreatedBy" ColumnName="prit_CreatedBy" />
+          <ScalarProperty Name="prit_Deleted" ColumnName="prit_Deleted" />
+          <ScalarProperty Name="prit_PayrollItemID" ColumnName="prit_PayrollItemID" />
+          <ScalarProperty Name="payr_ExRate" ColumnName="payr_ExRate" />
+          <ScalarProperty Name="payr_ToDate" ColumnName="payr_ToDate" />
+          <ScalarProperty Name="payr_FrDate" ColumnName="payr_FrDate" />
+          <ScalarProperty Name="payr_NWD" ColumnName="payr_NWD" />
+          <ScalarProperty Name="payr_Name" ColumnName="payr_Name" />
+          <ScalarProperty Name="payr_Note" ColumnName="payr_Note" />
+          <ScalarProperty Name="payr_Date" ColumnName="payr_Date" />
+          <ScalarProperty Name="payr_ZoneID" ColumnName="payr_ZoneID" />
+          <ScalarProperty Name="payr_WorkflowItemID" ColumnName="payr_WorkflowItemID" />
+          <ScalarProperty Name="payr_WorkflowID" ColumnName="payr_WorkflowID" />
+          <ScalarProperty Name="payr_UpdatedDate" ColumnName="payr_UpdatedDate" />
+          <ScalarProperty Name="payr_UpdatedBy" ColumnName="payr_UpdatedBy" />
+          <ScalarProperty Name="payr_CreatedDate" ColumnName="payr_CreatedDate" />
+          <ScalarProperty Name="payr_CreatedBy" ColumnName="payr_CreatedBy" />
+          <ScalarProperty Name="payr_Deleted" ColumnName="payr_Deleted" />
+          <ScalarProperty Name="payr_PayrollID" ColumnName="payr_PayrollID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

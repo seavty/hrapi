@@ -175,6 +175,102 @@
     <Property Name="prbf_AdjustmentID" Type="nvarchar" MaxLength="200" />
     <Property Name="prbf_AdjustmentItemID" Type="nvarchar" MaxLength="200" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'HR_DHL.dbo.vEmployeePayrollAPI' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vEmployeePayrollAPI">
+    <Key>
+      <PropertyRef Name="payr_PayrollID" />
+      <PropertyRef Name="prit_PayrollItemID" />
+      <PropertyRef Name="empl_EmployeeID" />
+    </Key>
+    <Property Name="payr_PayrollID" Type="int" Nullable="false" />
+    <Property Name="payr_Deleted" Type="nvarchar" MaxLength="1" />
+    <Property Name="payr_CreatedBy" Type="int" />
+    <Property Name="payr_CreatedDate" Type="datetime" />
+    <Property Name="payr_UpdatedBy" Type="int" />
+    <Property Name="payr_UpdatedDate" Type="datetime" />
+    <Property Name="payr_WorkflowID" Type="int" />
+    <Property Name="payr_WorkflowItemID" Type="int" />
+    <Property Name="payr_ZoneID" Type="int" />
+    <Property Name="payr_Date" Type="datetime" />
+    <Property Name="payr_Note" Type="nvarchar" MaxLength="255" />
+    <Property Name="payr_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="payr_NWD" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="payr_FrDate" Type="datetime" />
+    <Property Name="payr_ToDate" Type="datetime" />
+    <Property Name="payr_ExRate" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="prit_PayrollItemID" Type="int" Nullable="false" />
+    <Property Name="prit_Deleted" Type="nvarchar" MaxLength="1" />
+    <Property Name="prit_CreatedBy" Type="int" />
+    <Property Name="prit_CreatedDate" Type="datetime" />
+    <Property Name="prit_UpdatedBy" Type="int" />
+    <Property Name="prit_UpdatedDate" Type="datetime" />
+    <Property Name="prit_WorkflowID" Type="int" />
+    <Property Name="prit_WorkflowItemID" Type="int" />
+    <Property Name="prit_ZoneID" Type="int" />
+    <Property Name="prit_PayrollID" Type="int" />
+    <Property Name="prit_EmployeeID" Type="int" />
+    <Property Name="prit_Salary" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="prit_AdjPlus" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="prit_AdjMinus" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="prit_SalaryR" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="prit_Spouse" Type="int" />
+    <Property Name="prit_Children" Type="int" />
+    <Property Name="prit_TaxRate" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="prit_Tax" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="prit_ReliefAmount" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="prit_TaxableIncome" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="prit_TaxableIncomeKH" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="prit_PositionID" Type="int" />
+    <Property Name="empl_EmployeeID" Type="int" Nullable="false" />
+    <Property Name="empl_Deleted" Type="nvarchar" MaxLength="1" />
+    <Property Name="empl_CreatedBy" Type="int" />
+    <Property Name="empl_CreatedDate" Type="datetime" />
+    <Property Name="empl_UpdatedBy" Type="int" />
+    <Property Name="empl_UpdatedDate" Type="datetime" />
+    <Property Name="empl_WorkflowID" Type="int" />
+    <Property Name="empl_WorkflowItemID" Type="int" />
+    <Property Name="empl_ZoneID" Type="int" />
+    <Property Name="empl_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="empl_PositionID" Type="int" />
+    <Property Name="empl_HiringDate" Type="datetime" />
+    <Property Name="empl_ConfirmationDate" Type="datetime" />
+    <Property Name="empl_ResignDate" Type="datetime" />
+    <Property Name="empl_DepartmentID" Type="int" />
+    <Property Name="empl_RootEmployeeID" Type="int" />
+    <Property Name="empl_WorkPermitNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_PayrollAccountNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_DOB" Type="nvarchar" MaxLength="20" />
+    <Property Name="empl_NationalityID" Type="int" />
+    <Property Name="empl_VisaNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="empl_Religion" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Phone2" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Spouse" Type="nvarchar" MaxLength="255" />
+    <Property Name="empl_Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_POB" Type="nvarchar" MaxLength="255" />
+    <Property Name="empl_IDCard" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Passport" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_NSSFNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Level" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_ProbationEnd" Type="datetime" />
+    <Property Name="empl_Salary" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="empl_JD" Type="nvarchar" MaxLength="500" />
+    <Property Name="empl_Children" Type="int" />
+    <Property Name="empl_ContractEndDate" Type="datetime" />
+    <Property Name="empl_ContractType" Type="nvarchar" MaxLength="50" />
+    <Property Name="empl_Token" Type="nvarchar" MaxLength="255" />
+    <Property Name="empl_Password" Type="nvarchar" MaxLength="255" />
+    <Property Name="empl_LeaveBallance" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="empl_LeaveUsed" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="empl_Leave" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="empl_LeaveSchemeID" Type="nvarchar" MaxLength="200" />
+    <Property Name="empl_PayrollBenefitID" Type="nvarchar" MaxLength="200" />
+    <Property Name="empl_AdjustmentSchemeID" Type="nvarchar" MaxLength="200" />
+  </EntityType>
   <EntityContainer Name="HR_DHLModelStoreContainer">
     <EntitySet Name="tblDepartment" EntityType="Self.tblDepartment" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblEmployee" EntityType="Self.tblEmployee" Schema="dbo" store:Type="Tables" />
@@ -183,5 +279,96 @@
     <EntitySet Name="tblLeaveSchemeItem" EntityType="Self.tblLeaveSchemeItem" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblPayroll" EntityType="Self.tblPayroll" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblPayrollBenefit" EntityType="Self.tblPayrollBenefit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vEmployeePayrollAPI" EntityType="Self.vEmployeePayrollAPI" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vEmployeePayrollAPI].[payr_PayrollID] AS [payr_PayrollID], 
+    [vEmployeePayrollAPI].[payr_Deleted] AS [payr_Deleted], 
+    [vEmployeePayrollAPI].[payr_CreatedBy] AS [payr_CreatedBy], 
+    [vEmployeePayrollAPI].[payr_CreatedDate] AS [payr_CreatedDate], 
+    [vEmployeePayrollAPI].[payr_UpdatedBy] AS [payr_UpdatedBy], 
+    [vEmployeePayrollAPI].[payr_UpdatedDate] AS [payr_UpdatedDate], 
+    [vEmployeePayrollAPI].[payr_WorkflowID] AS [payr_WorkflowID], 
+    [vEmployeePayrollAPI].[payr_WorkflowItemID] AS [payr_WorkflowItemID], 
+    [vEmployeePayrollAPI].[payr_ZoneID] AS [payr_ZoneID], 
+    [vEmployeePayrollAPI].[payr_Date] AS [payr_Date], 
+    [vEmployeePayrollAPI].[payr_Note] AS [payr_Note], 
+    [vEmployeePayrollAPI].[payr_Name] AS [payr_Name], 
+    [vEmployeePayrollAPI].[payr_NWD] AS [payr_NWD], 
+    [vEmployeePayrollAPI].[payr_FrDate] AS [payr_FrDate], 
+    [vEmployeePayrollAPI].[payr_ToDate] AS [payr_ToDate], 
+    [vEmployeePayrollAPI].[payr_ExRate] AS [payr_ExRate], 
+    [vEmployeePayrollAPI].[prit_PayrollItemID] AS [prit_PayrollItemID], 
+    [vEmployeePayrollAPI].[prit_Deleted] AS [prit_Deleted], 
+    [vEmployeePayrollAPI].[prit_CreatedBy] AS [prit_CreatedBy], 
+    [vEmployeePayrollAPI].[prit_CreatedDate] AS [prit_CreatedDate], 
+    [vEmployeePayrollAPI].[prit_UpdatedBy] AS [prit_UpdatedBy], 
+    [vEmployeePayrollAPI].[prit_UpdatedDate] AS [prit_UpdatedDate], 
+    [vEmployeePayrollAPI].[prit_WorkflowID] AS [prit_WorkflowID], 
+    [vEmployeePayrollAPI].[prit_WorkflowItemID] AS [prit_WorkflowItemID], 
+    [vEmployeePayrollAPI].[prit_ZoneID] AS [prit_ZoneID], 
+    [vEmployeePayrollAPI].[prit_PayrollID] AS [prit_PayrollID], 
+    [vEmployeePayrollAPI].[prit_EmployeeID] AS [prit_EmployeeID], 
+    [vEmployeePayrollAPI].[prit_Salary] AS [prit_Salary], 
+    [vEmployeePayrollAPI].[prit_AdjPlus] AS [prit_AdjPlus], 
+    [vEmployeePayrollAPI].[prit_AdjMinus] AS [prit_AdjMinus], 
+    [vEmployeePayrollAPI].[prit_SalaryR] AS [prit_SalaryR], 
+    [vEmployeePayrollAPI].[prit_Spouse] AS [prit_Spouse], 
+    [vEmployeePayrollAPI].[prit_Children] AS [prit_Children], 
+    [vEmployeePayrollAPI].[prit_TaxRate] AS [prit_TaxRate], 
+    [vEmployeePayrollAPI].[prit_Tax] AS [prit_Tax], 
+    [vEmployeePayrollAPI].[prit_ReliefAmount] AS [prit_ReliefAmount], 
+    [vEmployeePayrollAPI].[prit_TaxableIncome] AS [prit_TaxableIncome], 
+    [vEmployeePayrollAPI].[prit_TaxableIncomeKH] AS [prit_TaxableIncomeKH], 
+    [vEmployeePayrollAPI].[prit_PositionID] AS [prit_PositionID], 
+    [vEmployeePayrollAPI].[empl_EmployeeID] AS [empl_EmployeeID], 
+    [vEmployeePayrollAPI].[empl_Deleted] AS [empl_Deleted], 
+    [vEmployeePayrollAPI].[empl_CreatedBy] AS [empl_CreatedBy], 
+    [vEmployeePayrollAPI].[empl_CreatedDate] AS [empl_CreatedDate], 
+    [vEmployeePayrollAPI].[empl_UpdatedBy] AS [empl_UpdatedBy], 
+    [vEmployeePayrollAPI].[empl_UpdatedDate] AS [empl_UpdatedDate], 
+    [vEmployeePayrollAPI].[empl_WorkflowID] AS [empl_WorkflowID], 
+    [vEmployeePayrollAPI].[empl_WorkflowItemID] AS [empl_WorkflowItemID], 
+    [vEmployeePayrollAPI].[empl_ZoneID] AS [empl_ZoneID], 
+    [vEmployeePayrollAPI].[empl_Code] AS [empl_Code], 
+    [vEmployeePayrollAPI].[empl_Name] AS [empl_Name], 
+    [vEmployeePayrollAPI].[empl_PositionID] AS [empl_PositionID], 
+    [vEmployeePayrollAPI].[empl_HiringDate] AS [empl_HiringDate], 
+    [vEmployeePayrollAPI].[empl_ConfirmationDate] AS [empl_ConfirmationDate], 
+    [vEmployeePayrollAPI].[empl_ResignDate] AS [empl_ResignDate], 
+    [vEmployeePayrollAPI].[empl_DepartmentID] AS [empl_DepartmentID], 
+    [vEmployeePayrollAPI].[empl_RootEmployeeID] AS [empl_RootEmployeeID], 
+    [vEmployeePayrollAPI].[empl_WorkPermitNo] AS [empl_WorkPermitNo], 
+    [vEmployeePayrollAPI].[empl_PayrollAccountNo] AS [empl_PayrollAccountNo], 
+    [vEmployeePayrollAPI].[empl_DOB] AS [empl_DOB], 
+    [vEmployeePayrollAPI].[empl_NationalityID] AS [empl_NationalityID], 
+    [vEmployeePayrollAPI].[empl_VisaNo] AS [empl_VisaNo], 
+    [vEmployeePayrollAPI].[empl_Address] AS [empl_Address], 
+    [vEmployeePayrollAPI].[empl_Religion] AS [empl_Religion], 
+    [vEmployeePayrollAPI].[empl_Email] AS [empl_Email], 
+    [vEmployeePayrollAPI].[empl_Phone] AS [empl_Phone], 
+    [vEmployeePayrollAPI].[empl_Phone2] AS [empl_Phone2], 
+    [vEmployeePayrollAPI].[empl_Spouse] AS [empl_Spouse], 
+    [vEmployeePayrollAPI].[empl_Gender] AS [empl_Gender], 
+    [vEmployeePayrollAPI].[empl_POB] AS [empl_POB], 
+    [vEmployeePayrollAPI].[empl_IDCard] AS [empl_IDCard], 
+    [vEmployeePayrollAPI].[empl_Passport] AS [empl_Passport], 
+    [vEmployeePayrollAPI].[empl_NSSFNo] AS [empl_NSSFNo], 
+    [vEmployeePayrollAPI].[empl_Level] AS [empl_Level], 
+    [vEmployeePayrollAPI].[empl_ProbationEnd] AS [empl_ProbationEnd], 
+    [vEmployeePayrollAPI].[empl_Salary] AS [empl_Salary], 
+    [vEmployeePayrollAPI].[empl_JD] AS [empl_JD], 
+    [vEmployeePayrollAPI].[empl_Children] AS [empl_Children], 
+    [vEmployeePayrollAPI].[empl_ContractEndDate] AS [empl_ContractEndDate], 
+    [vEmployeePayrollAPI].[empl_ContractType] AS [empl_ContractType], 
+    [vEmployeePayrollAPI].[empl_Token] AS [empl_Token], 
+    [vEmployeePayrollAPI].[empl_Password] AS [empl_Password], 
+    [vEmployeePayrollAPI].[empl_LeaveBallance] AS [empl_LeaveBallance], 
+    [vEmployeePayrollAPI].[empl_LeaveUsed] AS [empl_LeaveUsed], 
+    [vEmployeePayrollAPI].[empl_Leave] AS [empl_Leave], 
+    [vEmployeePayrollAPI].[empl_LeaveSchemeID] AS [empl_LeaveSchemeID], 
+    [vEmployeePayrollAPI].[empl_PayrollBenefitID] AS [empl_PayrollBenefitID], 
+    [vEmployeePayrollAPI].[empl_AdjustmentSchemeID] AS [empl_AdjustmentSchemeID]
+    FROM [dbo].[vEmployeePayrollAPI] AS [vEmployeePayrollAPI]</DefiningQuery>
+    </EntitySet>
   </EntityContainer>
 </Schema>
