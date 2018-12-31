@@ -149,6 +149,7 @@
     <EntitySet Name="tblLeaveSchemes" EntityType="HR_DHLModel.tblLeaveScheme" />
     <EntitySet Name="tblLeaveSchemeItems" EntityType="HR_DHLModel.tblLeaveSchemeItem" />
     <EntitySet Name="vEmployeePayrollAPIs" EntityType="HR_DHLModel.vEmployeePayrollAPI" />
+    <EntitySet Name="vWorkHistories" EntityType="HR_DHLModel.vWorkHistory" />
   </EntityContainer>
   <EntityType Name="tblLeaveScheme">
     <Key>
@@ -278,5 +279,30 @@
     <Property Name="empl_LeaveSchemeID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="empl_PayrollBenefitID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="empl_AdjustmentSchemeID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vWorkHistory">
+    <Key>
+      <PropertyRef Name="wkhs_WorkHistoryID" />
+    </Key>
+    <Property Name="wkhs_WorkHistoryID" Type="Int32" Nullable="false" />
+    <Property Name="wkhs_Deleted" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="wkhs_CreatedBy" Type="Int32" />
+    <Property Name="wkhs_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="wkhs_UpdatedBy" Type="Int32" />
+    <Property Name="wkhs_UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="wkhs_WorkflowID" Type="Int32" />
+    <Property Name="wkhs_WorkflowItemID" Type="Int32" />
+    <Property Name="wkhs_ZoneID" Type="Int32" />
+    <Property Name="wkhs_FrDate" Type="DateTime" Precision="3" />
+    <Property Name="wkhs_ToDate" Type="DateTime" Precision="3" />
+    <Property Name="wkhs_FrPositionID" Type="Int32" />
+    <Property Name="wkhs_ToPositionID" Type="Int32" />
+    <Property Name="wkhs_Salary" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="wkhs_EmployeeID" Type="Int32" />
+    <Property Name="wkhs_Remarks" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="wkhs_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="wkhs_Resign" Type="DateTime" Precision="3" />
+    <Property Name="FrPosition" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ToPosition" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

@@ -1,0 +1,71 @@
+﻿
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm merienda">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand">
+        <img src="~/Content/img/logo.png" style="width:50px; height:40px" />
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li role="separator" class="divider-vertical"></li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Content("~/employee/payroll/1")"> <i class="fas fa-dollar-sign"></i> Payroll  </a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Content("~/employee/leave/1")"> <i class="fas fa-envelope-square"></i> Leave  </a>
+            </li>
+            
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Content("~/employee/workhistory/1")"> <i class="fas fa-history"></i> Work History  </a>
+            </li>
+
+
+            <li role="separator" class="divider-vertical"></li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Content("~/user/find")"> <i class="fas fa-user-cog"></i> User  </a>
+            </li>
+
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active dropdown">
+                    
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="@Url.Content("~/user/changepassword")"> <i class="fas fa-cog"></i> Change Password  </a>
+                    </div>
+                </li>
+                <li role="separator" class="divider-vertical"></li>
+                <li class="nav-item active"> <a class="nav-link" href="javascript:onclick=logout()"> <i class="fas fa-sign-out-alt"></i> Logout  </a> </li>
+            </ul>
+
+
+        </div>
+
+
+    </div>
+</nav>
+
+<br />
+<br />
+<br />
+
+<input type="hidden" name="baseURL" id="baseURL" value="@Url.Content("~")" />
+
+<script>
+    function logout() {
+        if (confirm("Do you want to log out?")) {
+            const endPoint = "@Url.Content("~/auth")";
+            ajaxHelper(endPoint + "/logout", null, requestMethod.POST).then(function (data) {
+               window.location.href = "@Url.Content("~/auth/login")";
+            });
+
+        }
+    }
+</script>
+
+

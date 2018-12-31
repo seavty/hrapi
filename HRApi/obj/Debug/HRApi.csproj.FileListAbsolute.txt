@@ -49,6 +49,9 @@ C:\Projects\HRApi\HRApi\HRApi\bin\roslyn\vbc.rsp
 C:\Projects\HRApi\HRApi\HRApi\bin\roslyn\VBCSCompiler.exe
 C:\Projects\HRApi\HRApi\HRApi\bin\roslyn\VBCSCompiler.exe.config
 C:\Projects\HRApi\HRApi\HRApi\bin\Antlr3.Runtime.dll
+C:\Projects\HRApi\HRApi\HRApi\bin\AutoMapper.dll
+C:\Projects\HRApi\HRApi\HRApi\bin\EntityFramework.dll
+C:\Projects\HRApi\HRApi\HRApi\bin\EntityFramework.SqlServer.dll
 C:\Projects\HRApi\HRApi\HRApi\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Projects\HRApi\HRApi\HRApi\bin\Microsoft.AI.DependencyCollector.dll
 C:\Projects\HRApi\HRApi\HRApi\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -62,6 +65,7 @@ C:\Projects\HRApi\HRApi\HRApi\bin\Microsoft.Web.Infrastructure.dll
 C:\Projects\HRApi\HRApi\HRApi\bin\Newtonsoft.Json.dll
 C:\Projects\HRApi\HRApi\HRApi\bin\System.Diagnostics.DiagnosticSource.dll
 C:\Projects\HRApi\HRApi\HRApi\bin\System.Net.Http.Formatting.dll
+C:\Projects\HRApi\HRApi\HRApi\bin\System.ValueTuple.dll
 C:\Projects\HRApi\HRApi\HRApi\bin\System.Web.Helpers.dll
 C:\Projects\HRApi\HRApi\HRApi\bin\System.Web.Http.dll
 C:\Projects\HRApi\HRApi\HRApi\bin\System.Web.Http.WebHost.dll
@@ -72,6 +76,11 @@ C:\Projects\HRApi\HRApi\HRApi\bin\System.Web.WebPages.Deployment.dll
 C:\Projects\HRApi\HRApi\HRApi\bin\System.Web.WebPages.dll
 C:\Projects\HRApi\HRApi\HRApi\bin\System.Web.WebPages.Razor.dll
 C:\Projects\HRApi\HRApi\HRApi\bin\WebGrease.dll
+C:\Projects\HRApi\HRApi\HRApi\bin\AutoMapper.pdb
+C:\Projects\HRApi\HRApi\HRApi\bin\AutoMapper.xml
+C:\Projects\HRApi\HRApi\HRApi\bin\EntityFramework.xml
+C:\Projects\HRApi\HRApi\HRApi\bin\EntityFramework.SqlServer.xml
+C:\Projects\HRApi\HRApi\HRApi\bin\System.ValueTuple.xml
 C:\Projects\HRApi\HRApi\HRApi\bin\Newtonsoft.Json.xml
 C:\Projects\HRApi\HRApi\HRApi\bin\System.Net.Http.Formatting.xml
 C:\Projects\HRApi\HRApi\HRApi\bin\System.Web.Helpers.xml
@@ -95,12 +104,3 @@ C:\Projects\HRApi\HRApi\HRApi\obj\Debug\HRApi.csproj.CoreCompileInputs.cache
 C:\Projects\HRApi\HRApi\HRApi\obj\Debug\HRApi.csproj.CopyComplete
 C:\Projects\HRApi\HRApi\HRApi\obj\Debug\HRApi.dll
 C:\Projects\HRApi\HRApi\HRApi\obj\Debug\HRApi.pdb
-C:\Projects\HRApi\HRApi\HRApi\bin\AutoMapper.dll
-C:\Projects\HRApi\HRApi\HRApi\bin\EntityFramework.dll
-C:\Projects\HRApi\HRApi\HRApi\bin\EntityFramework.SqlServer.dll
-C:\Projects\HRApi\HRApi\HRApi\bin\System.ValueTuple.dll
-C:\Projects\HRApi\HRApi\HRApi\bin\AutoMapper.pdb
-C:\Projects\HRApi\HRApi\HRApi\bin\AutoMapper.xml
-C:\Projects\HRApi\HRApi\HRApi\bin\EntityFramework.xml
-C:\Projects\HRApi\HRApi\HRApi\bin\EntityFramework.SqlServer.xml
-C:\Projects\HRApi\HRApi\HRApi\bin\System.ValueTuple.xml

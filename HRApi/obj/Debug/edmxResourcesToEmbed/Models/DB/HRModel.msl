@@ -276,5 +276,31 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="vWorkHistories">
+      <EntityTypeMapping TypeName="HR_DHLModel.vWorkHistory">
+        <MappingFragment StoreEntitySet="vWorkHistory">
+          <ScalarProperty Name="ToPosition" ColumnName="ToPosition" />
+          <ScalarProperty Name="FrPosition" ColumnName="FrPosition" />
+          <ScalarProperty Name="wkhs_Resign" ColumnName="wkhs_Resign" />
+          <ScalarProperty Name="wkhs_Status" ColumnName="wkhs_Status" />
+          <ScalarProperty Name="wkhs_Remarks" ColumnName="wkhs_Remarks" />
+          <ScalarProperty Name="wkhs_EmployeeID" ColumnName="wkhs_EmployeeID" />
+          <ScalarProperty Name="wkhs_Salary" ColumnName="wkhs_Salary" />
+          <ScalarProperty Name="wkhs_ToPositionID" ColumnName="wkhs_ToPositionID" />
+          <ScalarProperty Name="wkhs_FrPositionID" ColumnName="wkhs_FrPositionID" />
+          <ScalarProperty Name="wkhs_ToDate" ColumnName="wkhs_ToDate" />
+          <ScalarProperty Name="wkhs_FrDate" ColumnName="wkhs_FrDate" />
+          <ScalarProperty Name="wkhs_ZoneID" ColumnName="wkhs_ZoneID" />
+          <ScalarProperty Name="wkhs_WorkflowItemID" ColumnName="wkhs_WorkflowItemID" />
+          <ScalarProperty Name="wkhs_WorkflowID" ColumnName="wkhs_WorkflowID" />
+          <ScalarProperty Name="wkhs_UpdatedDate" ColumnName="wkhs_UpdatedDate" />
+          <ScalarProperty Name="wkhs_UpdatedBy" ColumnName="wkhs_UpdatedBy" />
+          <ScalarProperty Name="wkhs_CreatedDate" ColumnName="wkhs_CreatedDate" />
+          <ScalarProperty Name="wkhs_CreatedBy" ColumnName="wkhs_CreatedBy" />
+          <ScalarProperty Name="wkhs_Deleted" ColumnName="wkhs_Deleted" />
+          <ScalarProperty Name="wkhs_WorkHistoryID" ColumnName="wkhs_WorkHistoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -240,12 +240,16 @@
     <Compile Include="Models\DB\vEmployeePayrollAPI.cs">
       <DependentUpon>HRModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DB\vWorkHistory.cs">
+      <DependentUpon>HRModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\DTO\Employee\EmployeeBaseDTO.cs" />
     <Compile Include="Models\DTO\Employee\EmployeeEditDTO.cs" />
     <Compile Include="Models\DTO\Employee\EmployeeLeaveDTO.cs" />
     <Compile Include="Models\DTO\Employee\EmployeeNewDTO.cs" />
     <Compile Include="Models\DTO\Employee\EmployeePayrollDTO.cs" />
     <Compile Include="Models\DTO\Employee\EmployeeViewDTO.cs" />
+    <Compile Include="Models\DTO\Employee\EmployeeWorkHistory.cs" />
     <Compile Include="Models\DTO\GetListDTO.cs" />
     <Compile Include="Models\DTO\LeaveSchemeItem\LeaveSchemeItemBaseDTO.cs" />
     <Compile Include="Models\DTO\LeaveSchemeItem\LeaveSchemeItemEditDTO.cs" />
@@ -265,6 +269,7 @@
     <Compile Include="Utils\Attribute\SkipAuthenticationAttribute.cs" />
     <Compile Include="Utils\Attribute\TokenValidationAttribute.cs" />
     <Compile Include="Utils\Extension\PagingExtension.cs" />
+    <Compile Include="Utils\Extension\StringExtension.cs" />
     <Compile Include="Utils\Handler\EmployeeHandler.cs" />
     <Compile Include="Utils\Handler\LeaveSchemeHandler.cs" />
     <Compile Include="Utils\Handler\LeaveSchemeItemHandler.cs" />

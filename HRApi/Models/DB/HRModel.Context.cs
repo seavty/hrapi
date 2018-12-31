@@ -33,5 +33,6 @@ namespace HRApi.Models.DB
         public virtual DbSet<tblLeaveScheme> tblLeaveSchemes { get; set; }
         public virtual DbSet<tblLeaveSchemeItem> tblLeaveSchemeItems { get; set; }
         public virtual DbSet<vEmployeePayrollAPI> vEmployeePayrollAPIs { get; set; }
+        public virtual DbSet<vWorkHistory> vWorkHistories { get; set; }
     }
 }

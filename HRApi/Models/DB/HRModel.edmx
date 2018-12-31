@@ -276,6 +276,33 @@ warning 6002: The table/view 'HR_DHL.dbo.vEmployeePayrollAPI' does not have a pr
           <Property Name="empl_PayrollBenefitID" Type="nvarchar" MaxLength="200" />
           <Property Name="empl_AdjustmentSchemeID" Type="nvarchar" MaxLength="200" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'HR_DHL.dbo.vWorkHistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vWorkHistory">
+          <Key>
+            <PropertyRef Name="wkhs_WorkHistoryID" />
+          </Key>
+          <Property Name="wkhs_WorkHistoryID" Type="int" Nullable="false" />
+          <Property Name="wkhs_Deleted" Type="nvarchar" MaxLength="1" />
+          <Property Name="wkhs_CreatedBy" Type="int" />
+          <Property Name="wkhs_CreatedDate" Type="datetime" />
+          <Property Name="wkhs_UpdatedBy" Type="int" />
+          <Property Name="wkhs_UpdatedDate" Type="datetime" />
+          <Property Name="wkhs_WorkflowID" Type="int" />
+          <Property Name="wkhs_WorkflowItemID" Type="int" />
+          <Property Name="wkhs_ZoneID" Type="int" />
+          <Property Name="wkhs_FrDate" Type="datetime" />
+          <Property Name="wkhs_ToDate" Type="datetime" />
+          <Property Name="wkhs_FrPositionID" Type="int" />
+          <Property Name="wkhs_ToPositionID" Type="int" />
+          <Property Name="wkhs_Salary" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="wkhs_EmployeeID" Type="int" />
+          <Property Name="wkhs_Remarks" Type="nvarchar" MaxLength="255" />
+          <Property Name="wkhs_Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="wkhs_Resign" Type="datetime" />
+          <Property Name="FrPosition" Type="nvarchar" MaxLength="255" />
+          <Property Name="ToPosition" Type="nvarchar" MaxLength="255" />
+        </EntityType>
         <EntityContainer Name="HR_DHLModelStoreContainer">
           <EntitySet Name="tblDepartment" EntityType="Self.tblDepartment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblEmployee" EntityType="Self.tblEmployee" Schema="dbo" store:Type="Tables" />
@@ -374,6 +401,30 @@ warning 6002: The table/view 'HR_DHL.dbo.vEmployeePayrollAPI' does not have a pr
     [vEmployeePayrollAPI].[empl_PayrollBenefitID] AS [empl_PayrollBenefitID], 
     [vEmployeePayrollAPI].[empl_AdjustmentSchemeID] AS [empl_AdjustmentSchemeID]
     FROM [dbo].[vEmployeePayrollAPI] AS [vEmployeePayrollAPI]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vWorkHistory" EntityType="Self.vWorkHistory" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vWorkHistory].[wkhs_WorkHistoryID] AS [wkhs_WorkHistoryID], 
+    [vWorkHistory].[wkhs_Deleted] AS [wkhs_Deleted], 
+    [vWorkHistory].[wkhs_CreatedBy] AS [wkhs_CreatedBy], 
+    [vWorkHistory].[wkhs_CreatedDate] AS [wkhs_CreatedDate], 
+    [vWorkHistory].[wkhs_UpdatedBy] AS [wkhs_UpdatedBy], 
+    [vWorkHistory].[wkhs_UpdatedDate] AS [wkhs_UpdatedDate], 
+    [vWorkHistory].[wkhs_WorkflowID] AS [wkhs_WorkflowID], 
+    [vWorkHistory].[wkhs_WorkflowItemID] AS [wkhs_WorkflowItemID], 
+    [vWorkHistory].[wkhs_ZoneID] AS [wkhs_ZoneID], 
+    [vWorkHistory].[wkhs_FrDate] AS [wkhs_FrDate], 
+    [vWorkHistory].[wkhs_ToDate] AS [wkhs_ToDate], 
+    [vWorkHistory].[wkhs_FrPositionID] AS [wkhs_FrPositionID], 
+    [vWorkHistory].[wkhs_ToPositionID] AS [wkhs_ToPositionID], 
+    [vWorkHistory].[wkhs_Salary] AS [wkhs_Salary], 
+    [vWorkHistory].[wkhs_EmployeeID] AS [wkhs_EmployeeID], 
+    [vWorkHistory].[wkhs_Remarks] AS [wkhs_Remarks], 
+    [vWorkHistory].[wkhs_Status] AS [wkhs_Status], 
+    [vWorkHistory].[wkhs_Resign] AS [wkhs_Resign], 
+    [vWorkHistory].[FrPosition] AS [FrPosition], 
+    [vWorkHistory].[ToPosition] AS [ToPosition]
+    FROM [dbo].[vWorkHistory] AS [vWorkHistory]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -529,6 +580,7 @@ warning 6002: The table/view 'HR_DHL.dbo.vEmployeePayrollAPI' does not have a pr
           <EntitySet Name="tblLeaveSchemes" EntityType="HR_DHLModel.tblLeaveScheme" />
           <EntitySet Name="tblLeaveSchemeItems" EntityType="HR_DHLModel.tblLeaveSchemeItem" />
           <EntitySet Name="vEmployeePayrollAPIs" EntityType="HR_DHLModel.vEmployeePayrollAPI" />
+          <EntitySet Name="vWorkHistories" EntityType="HR_DHLModel.vWorkHistory" />
         </EntityContainer>
         <EntityType Name="tblLeaveScheme">
           <Key>
@@ -658,6 +710,31 @@ warning 6002: The table/view 'HR_DHL.dbo.vEmployeePayrollAPI' does not have a pr
           <Property Name="empl_LeaveSchemeID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="empl_PayrollBenefitID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="empl_AdjustmentSchemeID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vWorkHistory">
+          <Key>
+            <PropertyRef Name="wkhs_WorkHistoryID" />
+          </Key>
+          <Property Name="wkhs_WorkHistoryID" Type="Int32" Nullable="false" />
+          <Property Name="wkhs_Deleted" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="wkhs_CreatedBy" Type="Int32" />
+          <Property Name="wkhs_CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="wkhs_UpdatedBy" Type="Int32" />
+          <Property Name="wkhs_UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="wkhs_WorkflowID" Type="Int32" />
+          <Property Name="wkhs_WorkflowItemID" Type="Int32" />
+          <Property Name="wkhs_ZoneID" Type="Int32" />
+          <Property Name="wkhs_FrDate" Type="DateTime" Precision="3" />
+          <Property Name="wkhs_ToDate" Type="DateTime" Precision="3" />
+          <Property Name="wkhs_FrPositionID" Type="Int32" />
+          <Property Name="wkhs_ToPositionID" Type="Int32" />
+          <Property Name="wkhs_Salary" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="wkhs_EmployeeID" Type="Int32" />
+          <Property Name="wkhs_Remarks" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="wkhs_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="wkhs_Resign" Type="DateTime" Precision="3" />
+          <Property Name="FrPosition" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ToPosition" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -937,6 +1014,32 @@ warning 6002: The table/view 'HR_DHL.dbo.vEmployeePayrollAPI' does not have a pr
                 <ScalarProperty Name="payr_CreatedBy" ColumnName="payr_CreatedBy" />
                 <ScalarProperty Name="payr_Deleted" ColumnName="payr_Deleted" />
                 <ScalarProperty Name="payr_PayrollID" ColumnName="payr_PayrollID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vWorkHistories">
+            <EntityTypeMapping TypeName="HR_DHLModel.vWorkHistory">
+              <MappingFragment StoreEntitySet="vWorkHistory">
+                <ScalarProperty Name="ToPosition" ColumnName="ToPosition" />
+                <ScalarProperty Name="FrPosition" ColumnName="FrPosition" />
+                <ScalarProperty Name="wkhs_Resign" ColumnName="wkhs_Resign" />
+                <ScalarProperty Name="wkhs_Status" ColumnName="wkhs_Status" />
+                <ScalarProperty Name="wkhs_Remarks" ColumnName="wkhs_Remarks" />
+                <ScalarProperty Name="wkhs_EmployeeID" ColumnName="wkhs_EmployeeID" />
+                <ScalarProperty Name="wkhs_Salary" ColumnName="wkhs_Salary" />
+                <ScalarProperty Name="wkhs_ToPositionID" ColumnName="wkhs_ToPositionID" />
+                <ScalarProperty Name="wkhs_FrPositionID" ColumnName="wkhs_FrPositionID" />
+                <ScalarProperty Name="wkhs_ToDate" ColumnName="wkhs_ToDate" />
+                <ScalarProperty Name="wkhs_FrDate" ColumnName="wkhs_FrDate" />
+                <ScalarProperty Name="wkhs_ZoneID" ColumnName="wkhs_ZoneID" />
+                <ScalarProperty Name="wkhs_WorkflowItemID" ColumnName="wkhs_WorkflowItemID" />
+                <ScalarProperty Name="wkhs_WorkflowID" ColumnName="wkhs_WorkflowID" />
+                <ScalarProperty Name="wkhs_UpdatedDate" ColumnName="wkhs_UpdatedDate" />
+                <ScalarProperty Name="wkhs_UpdatedBy" ColumnName="wkhs_UpdatedBy" />
+                <ScalarProperty Name="wkhs_CreatedDate" ColumnName="wkhs_CreatedDate" />
+                <ScalarProperty Name="wkhs_CreatedBy" ColumnName="wkhs_CreatedBy" />
+                <ScalarProperty Name="wkhs_Deleted" ColumnName="wkhs_Deleted" />
+                <ScalarProperty Name="wkhs_WorkHistoryID" ColumnName="wkhs_WorkHistoryID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

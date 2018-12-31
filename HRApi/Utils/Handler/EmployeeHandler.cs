@@ -45,7 +45,12 @@ namespace HRApi.Utils.Handler
             var myList = new List<EmployeePayrollDTO>();
             foreach (var record in records)
             {
-                myList.Add(MappingHelper.MapDBClassToDTO<vEmployeePayrollAPI, EmployeePayrollDTO>(record));
+                //myList.Add(MappingHelper.MapDBClassToDTO<vEmployeePayrollAPI, EmployeePayrollDTO>(record));
+                var tmp = MappingHelper.MapDBClassToDTO<vEmployeePayrollAPI, EmployeePayrollDTO>(record);
+                tmp.fromDate = record.payr_FrDate.ToString().ToDateOnly_Client();
+                tmp.toDate = record.payr_ToDate.ToString().ToDateOnly_Client();
+                myList.Add(tmp);
+               
             }
             var getList = new GetListDTO<EmployeePayrollDTO>();
             getList.metaData = await PaginationHelper.GetMetaData(currentPage, query, "name", "asc", null);
@@ -54,7 +59,7 @@ namespace HRApi.Utils.Handler
             return getList;
         }
 
-        //=>
+        //=> EmployeeLeave
         public async Task<GetListDTO<EmployeeLeaveDTO>> EmployeeLeave(int empID, int currentPage)
         {
             var query = db.tblLeaves.Where(x => x.leav_EmployeeID == empID.ToString()).OrderByDescending(x => x.leav_Date);
@@ -63,9 +68,37 @@ namespace HRApi.Utils.Handler
             var myList = new List<EmployeeLeaveDTO>();
             foreach (var record in records)
             {
-                myList.Add(MappingHelper.MapDBClassToDTO<tblLeave, EmployeeLeaveDTO>(record));
+                //myList.Add(MappingHelper.MapDBClassToDTO<tblLeave, EmployeeLeaveDTO>(record));
+
+                var tmp = MappingHelper.MapDBClassToDTO<tblLeave, EmployeeLeaveDTO>(record);
+                tmp.fromDate = record.leav_Date.ToString().ToDateOnly_Client();
+                tmp.toDate = record.leav_ToDate.ToString().ToDateOnly_Client();
+                myList.Add(tmp);
             }
             var getList = new GetListDTO<EmployeeLeaveDTO>();
+            getList.metaData = await PaginationHelper.GetMetaData(currentPage, query, "name", "asc", null);
+            getList.results = myList;
+
+            return getList;
+        }
+
+        //=> EmployeeWorkHistory
+        public async Task<GetListDTO<EmployeeWorkHistory>> EmployeeWorkHistory(int empID, int currentPage)
+        {
+            var query = db.vWorkHistories.Where(x => x.wkhs_EmployeeID == empID).OrderByDescending(x => x.wkhs_FrDate);
+            var records = await query.Page(currentPage).ToListAsync();
+
+            var myList = new List<EmployeeWorkHistory>();
+            foreach (var record in records)
+            {
+                //myList.Add(MappingHelper.MapDBClassToDTO<vWorkHistory, EmployeeWorkHistory>(record));
+
+                var tmp = MappingHelper.MapDBClassToDTO<vWorkHistory, EmployeeWorkHistory>(record);
+                tmp.fromDate = record.wkhs_FrDate.ToString().ToDateOnly_Client();
+                tmp.toDate = record.wkhs_FrDate.ToString().ToDateOnly_Client();
+                myList.Add(tmp);
+            }
+            var getList = new GetListDTO<EmployeeWorkHistory>();
             getList.metaData = await PaginationHelper.GetMetaData(currentPage, query, "name", "asc", null);
             getList.results = myList;
 
